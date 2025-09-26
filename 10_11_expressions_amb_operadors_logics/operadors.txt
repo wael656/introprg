@@ -1,0 +1,26 @@
+la Clara és més jove que tu         
+    edatClara < edatMeva
+
+la Clara i el Marc són més joves que tu
+    (edatClara < edatMeva) && (edatMarc < edatMeva)
+
+la Clara és més jove que tu i tu ets més jove que el Marc
+    (edatClara < edatMeva) && (edatMeva < edatMarc)
+
+la Clara no és més jove que el Marc
+    !(edatClara < edatMarc)
+
+no és cert que el Marc sigui més jove que la Clara
+    !(edatMarc < edatClara)
+
+Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc
+    (edatMarc >= edatClara) && (edatMeva >= edatMarc)
+
+Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat
+    (edatMeva > (edatClara + edatMarc)) || (edatClara == edatMarc) 
+    
+La Clara té una edat parella 
+    (edatClara % 2) == 0
+
+La Ta és més alta que 25 graus però no arriba a 30
+    (ta > 25) && (ta < 30)
