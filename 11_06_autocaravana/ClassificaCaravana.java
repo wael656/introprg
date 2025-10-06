@@ -9,7 +9,7 @@ public class ClassificaCaravana {
         int preu = Integer.parseInt(args[0]);
         
         if (preu < 50000) {
-            System.out.println("Económica");
+            System.out.println("Econòmica");
         } else if (preu >= 50000 && preu < 175000) {
             System.out.println("General");
         } else {
