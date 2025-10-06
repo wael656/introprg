@@ -5,19 +5,19 @@ public class DiaSetmana {
         int dia = Integer.parseInt(args[0]);
         
         if (dia == 1) {
-            System.out.println("dilluns");
+            System.out.println("Dilluns");
         } else if (dia == 2) {
-            System.out.println("dimarts");
+            System.out.println("Dimarts");
         } else if (dia == 3) {
-            System.out.println("dimecres");
+            System.out.println("Dimecres");
         } else if (dia == 4) {
-            System.out.println("dijous");
+            System.out.println("Dijous");
         } else if (dia == 5) {
-            System.out.println("divendres");
+            System.out.println("Divendres");
         } else if (dia == 6) {
-            System.out.println("dissabte");
+            System.out.println("Dissabte");
         } else if (dia == 7) {
-            System.out.println("diumenge");
+            System.out.println("Diumenge");
         } else {
             System.out.println("Error");
         }
