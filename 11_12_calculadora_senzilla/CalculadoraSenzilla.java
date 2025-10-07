@@ -28,8 +28,8 @@ public class CalculadoraSenzilla {
         else if (operador == '/') {
             resultat = operand1 / operand2;
             System.out.println(operand1 + " / " + operand2 + " = " + resultat);
-        }         
-        else {    
+        }           
+        if (operador != '+' && operador != '-' && operador != '*' && operador != '/') {    
             System.out.println("L'operador " + operador + " no està disponible");
         }
         
