@@ -11,6 +11,8 @@ public class Semafor {
             System.out.println("passa");
           } else if (color.equals("groc")) {
                 System.out.println("corre!");
+            } else if (color.equals("magenta")) {
+                System.out.println("ves a l'oculista");
             }
     }
 }
