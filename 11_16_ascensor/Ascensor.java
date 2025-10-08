@@ -12,7 +12,9 @@ public class Ascensor {
                 System.out.println("primer pis");
             } else if (boto.equals("pujar dos")) {
                 System.out.println("segon pis");
-              }
+              } else {
+                    System.out.println("error");
+                }
         }
         
         if (pis.equals("primer pis")) {
@@ -20,7 +22,9 @@ public class Ascensor {
                 System.out.println("planta baixa");
             } else if (boto.equals("pujar un")) {
                 System.out.println("segon pis");
-              }
+              } else {
+                    System.out.println("error");
+                }
         }
         
         if (pis.equals("segon pis")) {
@@ -28,7 +32,9 @@ public class Ascensor {
                 System.out.println("primer pis");
             } else if (boto.equals("baixar dos")) {
                   System.out.println("planta baixa");  
-              } 
+              } else {
+                    System.out.println("error");
+                } 
         }
         
         if (pis.equals("golfes")) {
