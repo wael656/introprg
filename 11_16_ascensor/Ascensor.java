@@ -33,6 +33,10 @@ public class Ascensor {
         
         if (pis.equals("golfes")) {
             System.out.println("error");
+        } else if (pis.equals("planta baixa")) {
+            if (boto.equals("baixar un") || boto.equals("baixar dos")) {
+                System.out.println("error");
+            }
         }   
     }
 }
