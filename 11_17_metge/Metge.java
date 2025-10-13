@@ -29,7 +29,7 @@ public class Metge {
                 if (estomac.equals("no")) {
                     System.out.println("Pren una aspirina");
                 } else if (estomac.equals("sí")) {
-                    System.out.println("Pren un paracetamol");        
+                    System.out.println("Pren paracetamol");        
                 }
             }
         
