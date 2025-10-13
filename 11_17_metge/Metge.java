@@ -27,7 +27,7 @@ public class Metge {
                 System.out.println("Problemes d'estómac? (sí o no)");
                 String estomac = Entrada.readLine();
                 if (estomac.equals("no")) {
-                    System.out.println("Pren una aspirina");
+                    System.out.println("Pren aspirina");
                 } else if (estomac.equals("sí")) {
                     System.out.println("Pren paracetamol");        
                 }
