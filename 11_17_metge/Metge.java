@@ -45,6 +45,8 @@ public class Metge {
                 } else {
                     System.out.println("Pren un carmel d'eucaliptus");
                   }
+                } else if (tos.equals("no")) {
+                    System.out.println("Vine a la consulta");
                 }
             }         
         }
