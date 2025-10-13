@@ -17,6 +17,14 @@ public class Metge {
             String tos = Entrada.readLine(); 
             if (tos.equals("no")) {
                 System.out.println("Vine a la consulta");
+            } else if (tos.equals("sí")) {
+                System.out.println("Edat?");
+                int edat = Integer.parseInt(Entrada.readLine());
+                if (edat < 12) {
+                    System.out.println("Pren un carmel de mel");
+                } else {
+                    System.out.println("Pren un carmel d'eucaliptus");
+                }
             }
         } 
          
