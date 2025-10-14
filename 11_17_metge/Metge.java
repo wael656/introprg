@@ -12,39 +12,28 @@ public class Metge {
     public static void main(String[] args) {
         System.out.println("Esternuts? (sí o no)");
         String esternuts = Entrada.readLine();
-        if (esternuts.equals("no")) {
-            System.out.println("Tos? (sí o no)");
-            String tos = Entrada.readLine(); 
-            if (tos.equals("no")) {
-                System.out.println("Vine a la consulta");
-            } else if (tos.equals("sí")) {
-                System.out.println("Edat?");
-                int edat = Integer.parseInt(Entrada.readLine());
-                if (edat < 12) {
-                    System.out.println("Pren un carmel de mel");
-                } else {
-                    System.out.println("Pren un carmel d'eucaliptus");
-                }
-            }
-        } 
-         
-         if (esternuts.equals("sí")) {   
+        boolean haRespost = false; 
+        if (esternuts.equals("sí")) {
             System.out.println("Mal de cap? (sí o no)");
-            String malCap = Entrada.readLine();        
+            String malCap = Entrada.readLine();
+
             if (malCap.equals("sí")) {
                 System.out.println("Problemes d'estómac? (sí o no)");
                 String estomac = Entrada.readLine();
-                if (estomac.equals("no")) {
+
+                if (estomac.equals("sí")) {
+                    System.out.println("Pren paracetamol");
+                } else {
                     System.out.println("Pren aspirina");
-                } else if (estomac.equals("sí")) {
-                    System.out.println("Pren paracetamol");        
                 }
+                haRespost = true;
             }
-        
-        
-        if (malCap.equals("no")) {
+        }
+
+        if (!haRespost) {
             System.out.println("Tos? (sí o no)");
             String tos = Entrada.readLine();
+
             if (tos.equals("sí")) {
                 System.out.println("Edat?");
                 int edat = Integer.parseInt(Entrada.readLine());
@@ -52,11 +41,10 @@ public class Metge {
                     System.out.println("Pren un carmel de mel");
                 } else {
                     System.out.println("Pren un carmel d'eucaliptus");
-                  }
-                } else if (tos.equals("no")) {
-                    System.out.println("Vine a la consulta");
                 }
-            }         
+            } else {
+                System.out.println("Vine a la consulta");
+            }
         }
     }
 }
