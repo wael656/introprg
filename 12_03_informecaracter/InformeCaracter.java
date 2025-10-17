@@ -6,7 +6,7 @@ public class InformeCaracter {
         
         if (text.isBlank()) {
             System.out.println("Error");
-        }
+        } else {
         
         System.out.println("Posició?");
         int posicio = Integer.parseInt(Entrada.readLine());
@@ -27,5 +27,6 @@ public class InformeCaracter {
         System.out.println("Character.isWhitespace(" + "\'" + text.charAt(posicio) + "\'" + "): " + Character.isWhitespace(text.charAt(posicio)));
         System.out.println("Character.toLowerCase(" + "\'" + text.charAt(posicio) + "\'" + "): " + Character.toLowerCase(text.charAt(posicio)));
         System.out.println("Character.toUpperCase(" + "\'" + text.charAt(posicio) + "\'" + "): " + Character.toUpperCase(text.charAt(posicio)));
+        }
     }
 }
