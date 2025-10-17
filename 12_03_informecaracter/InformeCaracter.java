@@ -3,8 +3,19 @@ public class InformeCaracter {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
+        
+        if (text.isBlank()) {
+            System.out.println("Error");
+        }
+        
         System.out.println("Posició?");
         int posicio = Integer.parseInt(Entrada.readLine());
+        
+        if (posicio > text.length() - 1 || posicio < 0) {
+            System.out.println("Fora de rang");
+        }
+        
+
         
         System.out.println("Character.getName(" + "\'" + text.charAt(posicio) + "\'" + "): " + Character.getName(text.charAt(posicio))); 
         System.out.println("Character.isDigit(" + "\'" + text.charAt(posicio) + "\'" + "): " + Character.isDigit(text.charAt(posicio)));
