@@ -7,14 +7,11 @@ public class AcabaLletraNoVocal {
         
         if (entrada.isBlank()) {
             System.out.println("text buit");
-        } else {
-            String minuscula = entrada.toLowerCase();
-            char ultimo = minuscula.charAt(minuscula.length() - 1);
-            
-            if (!minuscula.endsWith("a") && !minuscula.endsWith("e") && !minuscula.endsWith("i") && !minuscula.endsWith("o") && !minuscula.endsWith("u")) {
-                System.out.println("\"" + entrada + "\"" + " finalitza amb la lletra no vocal " + "'" + ultimo + "'");
+        } else {     
+            if (minuscula.endsWith("a") || minuscula.endsWith("e") || minuscula.endsWith("i") || minuscula.endsWith("o") || minuscula.endsWith("u") || minuscula.endsWith("A") || minuscula.endsWith("E") || minuscula.endsWith("I") || minuscula.endsWith("O") || minuscula.endsWith("U")) {
+                System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal ");
             } else {
-                System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
+                System.out.println("\"" + entrada + "\"" + " finalitza amb lletra no vocal " + "'" + entrada.charAt(entrada.length() - 1) + "'");
             }
         }
     }
