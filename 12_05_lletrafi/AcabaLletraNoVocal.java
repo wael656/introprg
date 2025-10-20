@@ -8,7 +8,6 @@ public class AcabaLletraNoVocal {
         if (entrada.isBlank()) {
             System.out.println("El text no té lletres");
         } else {
-            // passem tot a minúscules per simplificar les comprovacions
             String minuscula = entrada.toLowerCase();
             char ultim = minuscula.charAt(minuscula.length() - 1);
 
@@ -20,9 +19,7 @@ public class AcabaLletraNoVocal {
                     System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
 
                 } else {
-                    System.out.println("\"" + entrada + "\"" + 
-                        " finalitza amb la lletra no vocal '" + 
-                        entrada.charAt(entrada.length() - 1) + "'");
+                    System.out.println("\"" + entrada + "\"" + " finalitza amb la lletra no vocal '" + entrada.charAt(entrada.length() - 1) + "'");
                 }
             } else {
                 System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
