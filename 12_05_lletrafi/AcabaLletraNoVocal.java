@@ -11,7 +11,7 @@ public class AcabaLletraNoVocal {
             if (entrada.endsWith("a") || entrada.endsWith("e") || entrada.endsWith("i") || entrada.endsWith("o") || entrada.endsWith("u") || entrada.endsWith("A") || entrada.endsWith("E") || entrada.endsWith("I") || entrada.endsWith("O") || entrada.endsWith("U")) {
                 System.out.println("\"" + entrada + "\"" + " no finalitza amb la lletra no vocal ");
             } else {
-                System.out.println("\"" + entrada + "\"" + " finalitza amb lletra no vocal " + "'" + entrada.charAt(entrada.length() - 1) + "'");
+                System.out.println("\"" + entrada + "\"" + " finalitza amb la lletra no vocal " + "'" + entrada.charAt(entrada.length() - 1) + "'");
             }
         }
     }
