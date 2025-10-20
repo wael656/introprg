@@ -1,6 +1,6 @@
 /*Desenvolupa un programa que llegeixi de l'entrada estàndard un text i indiqui si comença o no per vocal, sigui majúscules o minúscules.*/
 
-public class IniciVocal {
+public class IniciaVocal {
     public static void main(String[] args) {
         System.out.println("Text?");
         String entrada = Entrada.readLine();
