@@ -5,21 +5,17 @@ public class AcabaLletraNoVocal {
         System.out.println("Text?");
         String entrada = Entrada.readLine();
         
-        if (entrada.isEmpty()) {
-            System.out.println("El text no té lletres");
+        if (entrada.isBlank()) {
+            System.out.println("text buit");
         } else {
-        
-        String minuscules = entrada.toLowerCase();
-        char ultimo = minuscules.charAt(minuscules.length() - 1);
-
-        
-        if (!minuscules.endsWith("a") && !minuscules.endsWith("e") && !minuscules.endsWith("i") && !minuscules.endsWith("o") && !minuscules.endsWith("u")) {
-            System.out.println("\"" + entrada + "\"" + " finalitza amb la lletra no vocal " + "'" + entrada.charAt(entrada.length() - 1) + "'");
-        } else if (!Character.isLetter(ultimo)) {                
-                System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
+            String minuscula = entrada.toLowerCase();
+            char ultimo = minuscula.charAt(minuscula.length() - 1);
+            
+            if (!minuscula.endsWith("a") && !minuscula.endsWith("e") && !minuscula.endsWith("i") && !minuscula.endsWith("o") && !minuscula.endsWith("u")) {
+                System.out.println("\"" + entrada + "\"" + " finalitza amb la lletra no vocal " + "'" + ultimo + "'");
             } else {
                 System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
-              }
-        }    
+            }
+        }
     }
 }
