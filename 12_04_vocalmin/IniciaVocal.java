@@ -11,7 +11,7 @@ public class IniciaVocal {
         } else if (entrada.isBlank()) {
             System.out.println("El text no té lletres");
           } else {
-            System.out.println("\"" + entrada + "\"" + " no inicia amb vocal.");
+            System.out.println("\"" + entrada + "\"" + " no inicia amb vocal");
             }
     }
 }
