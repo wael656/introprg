@@ -6,7 +6,7 @@ public class IniciVocal {
         String entrada = Entrada.readLine();
         
         String minuscules = entrada.toLowerCase();
-        if (minuscules.startsWith('a' || 'e' || 'i' || 'o' || 'u')) {
+        if (minuscules.startsWith("a") || minuscules.startsWith("e") || minuscules.startsWith("i") || minuscules.startsWith("o") || minuscules.startsWith("u")) {
             System.out.println("\"" + entrada + "\"" + " inicia amb vocal " + "'" + entrada.charAt(0) + "'");
         } else {
             System.out.println("\"" + entrada + "\"" + " no inicia amb vocal.");
