@@ -4,17 +4,30 @@ public class AcabaLletraNoVocal {
     public static void main(String[] args) {
         System.out.println("Text?");
         String entrada = Entrada.readLine();
-        
+
         if (entrada.isBlank()) {
-            System.out.println("text buit");
+            System.out.println("El text no té lletres");
         } else {
-            if (Character.isLetter(entrada.charAt(entrada.length() - 1))) {     
-                if (entrada.endsWith("a") || entrada.endsWith("e") || entrada.endsWith("i") || entrada.endsWith("o") || entrada.endsWith("u") || entrada.endsWith("A") || entrada.endsWith("E") || entrada.endsWith("I") || entrada.endsWith("O") || entrada.endsWith("U")) {
+            // passem tot a minúscules per simplificar les comprovacions
+            String minuscula = entrada.toLowerCase();
+            char ultim = minuscula.charAt(minuscula.length() - 1);
+
+            if (Character.isLetter(ultim)) {
+                if (minuscula.endsWith("a") || minuscula.endsWith("e") ||
+                    minuscula.endsWith("i") || minuscula.endsWith("o") ||
+                    minuscula.endsWith("u")) {
+
                     System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
+
                 } else {
-                    System.out.println("\"" + entrada + "\"" + " finalitza amb la lletra no vocal " + "'" + entrada.charAt(entrada.length() - 1) + "'");
+                    System.out.println("\"" + entrada + "\"" + 
+                        " finalitza amb la lletra no vocal '" + 
+                        entrada.charAt(entrada.length() - 1) + "'");
                 }
+            } else {
+                System.out.println("\"" + entrada + "\"" + " no finalitza amb lletra no vocal");
             }
-         }
+        }
     }
 }
+
