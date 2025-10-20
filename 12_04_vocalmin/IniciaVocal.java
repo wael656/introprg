@@ -7,7 +7,7 @@ public class IniciaVocal {
         
         String minuscules = entrada.toLowerCase();
         if (minuscules.startsWith("a") || minuscules.startsWith("e") || minuscules.startsWith("i") || minuscules.startsWith("o") || minuscules.startsWith("u")) {
-            System.out.println("\"" + entrada + "\"" + " inicia amb vocal " + "'" + entrada.charAt(0) + "'");
+            System.out.println("\"" + entrada + "\"" + " inicia amb la vocal " + "'" + entrada.charAt(0) + "'");
         } else if (entrada.isBlank()) {
             System.out.println("El text no té lletres");
           } else {
