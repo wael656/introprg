@@ -5,7 +5,7 @@ public class MatriculaValida {
         System.out.println("Introduïu una matrícula");
         String matricula = Entrada.readLine();
         
-        if (matricula.length() != 7) { 
+        if (matricula.length() == 7) { 
             if (Character.isUpperCase(matricula.charAt(0)) && Character.isUpperCase(matricula.charAt(1)) && Character.isUpperCase(matricula.charAt(5)) && Character.isUpperCase(matricula.charAt(6))) {            
                 if (Character.isLetter(matricula.charAt(0)) && Character.isLetter(matricula.charAt(1)) && Character.isLetter(matricula.charAt(5)) && Character.isLetter(matricula.charAt(6)) && Character.isDigit(matricula.charAt(2)) && Character.isDigit(matricula.charAt(3)) && Character.isDigit(matricula.charAt(4))) {
                 
