@@ -11,16 +11,16 @@ public class MatriculaValida {
                     if (Character.isLetter(matricula.charAt(5)) && Character.isLetter(matricula.charAt(6))) {
                         System.out.println("És una matrícula italiana vàlida");
                     } else {
-                        System.out.println("No és una matrícula vàlida");
+                        System.out.println("No és una matrícula italiana vàlida");
                     }
                 } else {
-                    System.out.println("No és una matrícula vàlida");
+                    System.out.println("No és una matrícula italiana vàlida");
                 }
             } else {
-                System.out.println("No és una matrícula vàlida");
+                System.out.println("No és una matrícula italiana vàlida");
             }
         } else {
-            System.out.println("No és una matrícula vàlida");
+            System.out.println("No és una matrícula italiana vàlida");
         }
     }
 }
