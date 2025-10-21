@@ -20,7 +20,7 @@ public class AnalitzaCaracter {
                 } else if (Character.isDigit(entrada.charAt(posicio))) {
                     System.out.println("'" + entrada.charAt(posicio) + "'" + " és un dígit");
                 } else {
-                    System.out.println("'" + entrada.charAt(posicio) + "'" + " és un altre");
+                    System.out.println("'" + entrada.charAt(posicio) + "'" + " és una altra cosa");
                 }
             }
         }
