@@ -4,13 +4,16 @@ public class MatriculaValida {
     public static void main(String[] args) {
         System.out.println("Introduïu una matrícula");
         String matricula = Entrada.readLine();
-        String majuscula = matricula.toUpperCase();
         
-        if (majuscula.length() == 7) {
-            if (Character.isLetter(majuscula.charAt(0)) && Character.isLetter(majuscula.charAt(1))) {
-                if (Character.isDigit(majuscula.charAt(2)) && Character.isDigit(majuscula.charAt(3)) && Character.isDigit(majuscula.charAt(4))) {
-                    if (Character.isLetter(majuscula.charAt(5)) && Character.isLetter(majuscula.charAt(6))) {
-                        System.out.println("És una matrícula italiana vàlida");
+        if (Character.isUpperCase(matricula.charAt(0)) && Character.isUpperCase(matricula.charAt(1)) && Character.isUpperCase(matricula.charAt(5)) && Character.isUpperCase(matricula.charAt(6))) {
+            if (matricula.length() == 7) {
+                if (Character.isLetter(matricula.charAt(0)) && Character.isLetter(matricula.charAt(1))) {
+                    if (Character.isDigit(matricula.charAt(2)) && Character.isDigit(matricula.charAt(3)) && Character.isDigit(matricula.charAt(4))) {
+                        if (Character.isLetter(matricula.charAt(5)) && Character.isLetter(matricula.charAt(6))) {
+                            System.out.println("És una matrícula italiana vàlida");
+                        } else {
+                            System.out.println("No és una matrícula italiana vàlida");
+                        }
                     } else {
                         System.out.println("No és una matrícula italiana vàlida");
                     }
