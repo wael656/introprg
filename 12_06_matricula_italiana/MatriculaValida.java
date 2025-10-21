@@ -5,10 +5,21 @@ public class MatriculaValida {
         System.out.println("Introduïu una matrícula");
         String matricula = Entrada.readLine();
         
-        if (matricula.length() == 7) { 
+        if (matricula.length() != 7) { 
             if (Character.isUpperCase(matricula.charAt(0)) && Character.isUpperCase(matricula.charAt(1)) && Character.isUpperCase(matricula.charAt(5)) && Character.isUpperCase(matricula.charAt(6))) {            
                 if (Character.isLetter(matricula.charAt(0)) && Character.isLetter(matricula.charAt(1)) && Character.isLetter(matricula.charAt(5)) && Character.isLetter(matricula.charAt(6)) && Character.isDigit(matricula.charAt(2)) && Character.isDigit(matricula.charAt(3)) && Character.isDigit(matricula.charAt(4))) {
-                    System.out.println("És una matrícula italiana vàlida");
+                
+                char a = matricula.charAt(0);
+                char b = matricula.charAt(1);
+                char c = matricula.charAt(5);
+                char d = matricula.charAt(6);
+                
+                    if (a != 'Ç' && a != 'À' && a != 'Ñ' && a != 'ß' && a != 'I' && a != 'O' && a != 'Q' && a != 'Q' && b != 'Ç' && b != 'À' && b != 'Ñ' && b != 'ß' && b != 'I' && b != 'O' && b != 'Q' && b != 'Q' && c != 'Ç' && c != 'À' && c != 'Ñ' && c != 'ß' && c != 'I' && c != 'O' && c != 'Q' && c != 'Q' && d != 'Ç' && d != 'À' && d != 'Ñ' && d != 'ß' && d != 'I' && d != 'O' && d != 'Q' && d != 'Q') {
+                        System.out.println("És una matrícula italiana vàlida"); 
+                    } else {
+                        System.out.println("No és una matrícula italiana vàlida");
+                    } 
+             
                 } else {
                     System.out.println("No és una matrícula italiana vàlida");
                 }
