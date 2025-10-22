@@ -4,6 +4,10 @@ public class Hora {
     public static void main(String[] args) {
         String hora = Entrada.readLine();
         
+        if (hora.isBlank()) {
+            System.out.println("");
+        } else {
+        
         if (hora.length() > 6 || Character.isLetter(hora.charAt(hora.length()-1))) {
             System.out.println("Error");
         } else if (hora.length() == 1) {
@@ -18,6 +22,7 @@ public class Hora {
                     System.out.println("0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2) +  ":" + hora.charAt(1) + hora.charAt(2));
                   } else if (hora.length() == 6) {
                         System.out.println("" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3) +  ":" + hora.charAt(4) + hora.charAt(5));
-                  }  
+                  }
+          }  
     }
 } 
