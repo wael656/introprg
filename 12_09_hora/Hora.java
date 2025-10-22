@@ -5,7 +5,7 @@ public class Hora {
         String hora = Entrada.readLine();
         
         if (hora.isBlank()) {
-            System.out.println("");
+            System.out.println("00:00:00");
         } else {
         
         if (hora.length() > 6 || Character.isLetter(hora.charAt(hora.length()-1))) {
