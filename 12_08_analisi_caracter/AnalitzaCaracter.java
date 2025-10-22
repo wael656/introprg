@@ -12,10 +12,11 @@ public class AnalitzaCaracter {
             System.out.println("Posició?");
             int posicio = Integer.parseInt(Entrada.readLine());
             
-            if (posicio <= entrada.length() - 1) {
                 
-            } else if (posicio < 0) {
+              if (posicio < 0) {
                 posicio = posicio + entrada.length();
+            } else if (posicio >= entrada.length() - 1) {
+                posicio = posicio % entrada.length();
             }
             
             
