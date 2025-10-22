@@ -19,7 +19,7 @@ public class Hora {
               } else if (hora.length() == 4) {
                 System.out.println("00:" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3));
                 } else if (hora.length() == 5) {
-                    System.out.println("0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2) +  ":" + hora.charAt(1) + hora.charAt(2));
+                    System.out.println("0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2) +  ":" + hora.charAt(3) + hora.charAt(4));
                   } else if (hora.length() == 6) {
                         System.out.println("" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3) +  ":" + hora.charAt(4) + hora.charAt(5));
                   }
