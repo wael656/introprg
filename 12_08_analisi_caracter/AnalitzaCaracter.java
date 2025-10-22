@@ -13,6 +13,12 @@ public class AnalitzaCaracter {
             int posicio = Integer.parseInt(Entrada.readLine());
             
             if (posicio <= entrada.length() - 1) {
+                
+            } else if (posicio < 0) {
+                posicio = posicio + entrada.length();
+            }
+            
+            
                 if (Character.isLetter(entrada.charAt(posicio)) && Character.isLowerCase(entrada.charAt(posicio))) {
                     System.out.println("'" + entrada.charAt(posicio) + "'" + " és una lletra minúscula");
                 } else if (Character.isLetter(entrada.charAt(posicio)) && Character.isUpperCase(entrada.charAt(posicio))) {
@@ -21,8 +27,7 @@ public class AnalitzaCaracter {
                     System.out.println("'" + entrada.charAt(posicio) + "'" + " és un dígit");
                 } else {
                     System.out.println("'" + entrada.charAt(posicio) + "'" + " és una altra cosa");
-                }
-            }
+                } 
         }
     }
 }
