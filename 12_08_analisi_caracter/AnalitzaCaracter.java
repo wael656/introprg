@@ -13,11 +13,11 @@ public class AnalitzaCaracter {
             int posicio = Integer.parseInt(Entrada.readLine());
             
                 
-              if (posicio < 0) {
-                posicio = posicio + entrada.length();
-            } else if (posicio >= entrada.length() - 1) {
-                posicio = posicio % entrada.length();
-            }
+              if (posicio >= entrada.length() || posicio < 0) {
+                    posicio = ((posicio % entrada.length()) + entrada.length()) % entrada.length();
+              } else if (posicio >= entrada.length() - 1) {
+                    posicio = posicio % entrada.length();
+                }
             
             
                 if (Character.isLetter(entrada.charAt(posicio)) && Character.isLowerCase(entrada.charAt(posicio))) {
