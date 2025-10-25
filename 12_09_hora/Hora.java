@@ -9,7 +9,7 @@ public class Hora {
         } else {
         
         if (hora.length() > 6 || Character.isLetter(hora.charAt(hora.length()-1))) {
-            System.out.println("Error");
+            System.out.println("ERROR");
         } else if (hora.length() == 1) {
             System.out.println("00:00:0" + hora);
           } else if (hora.length() == 2) {
