@@ -13,14 +13,49 @@ public class Hora {
                 
         } else if (hora.length() == 1) {
             System.out.println("00:00:0" + hora);
-          } else if (hora.length() == 2) {
-                System.out.println("00:00:" + hora);
+          }
+              
+           else if (hora.length() == 2) {
+                int s = Integer.parseInt("" + hora.charAt(0) + hora.charAt(1));
+                
+                if (s > 59) {
+                    System.out.println("ERROR");
+                } else {
+                    System.out.println("00:00:" + hora);
+                }
+                
             } else if (hora.length() == 3) {
-                System.out.println("00:0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2));
+                 int m = Integer.parseInt("0" + hora.charAt(0));
+                 int s = Integer.parseInt("" + hora.charAt(1) + hora.charAt(2));
+                 
+                 if (m > 59 || s > 59) {
+                    System.out.println("ERROR");
+                 } else  {
+                     System.out.println("00:0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2));
+                 }
+                 
+                
               } else if (hora.length() == 4) {
-                System.out.println("00:" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3));
+                    int m = Integer.parseInt("" + hora.charAt(0) + hora.charAt(1));
+                    int s = Integer.parseInt("" + hora.charAt(2) + hora.charAt(3));
+                    
+                    if (m > 59 || s > 59) {
+                        System.out.println("ERROR");
+                    } else {
+                        System.out.println("00:" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3));   
+                    }
+                    
                 } else if (hora.length() == 5) {
-                    System.out.println("0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2) +  ":" + hora.charAt(3) + hora.charAt(4));
+                        int h = Integer.parseInt("0" + hora.charAt(0));
+                        int m = Integer.parseInt("" + hora.charAt(1) + hora.charAt(2));
+                        int s = Integer.parseInt("" + hora.charAt(3) + hora.charAt(4));
+                        
+                        if (h > 23 || m > 59 || s > 59) {
+                            System.out.println("ERROR");
+                        } else {
+                            System.out.println("0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2) +  ":" + hora.charAt(3) + hora.charAt(4));
+                        }
+                        
                   } else if (hora.length() == 6) {
                         
                         int h = Integer.parseInt("" + hora.charAt(0) + hora.charAt(1));
