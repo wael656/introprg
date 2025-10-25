@@ -14,7 +14,7 @@ public class MatriculaValida {
                 char c = matricula.charAt(5);
                 char d = matricula.charAt(6);
                 
-                    if (a != 'Ç' && a != 'À' && a != 'Ñ' && a != 'ß' && a != 'I' && a != 'O' && a != 'Q' && a != 'Q' && b != 'Ç' && b != 'À' && b != 'Ñ' && b != 'ß' && b != 'I' && b != 'O' && b != 'Q' && b != 'Q' && c != 'Ç' && c != 'À' && c != 'Ñ' && c != 'ß' && c != 'I' && c != 'O' && c != 'Q' && c != 'Q' && d != 'Ç' && d != 'À' && d != 'Ñ' && d != 'ß' && d != 'I' && d != 'O' && d != 'Q' && d != 'Q' && a != 'U' && b != 'U' && c != 'U' && d != 'U') {
+                if ( a != 'Ä' && a != 'Ç' && a != 'À' && a != 'Ñ' && a != 'ß' && a != 'I' && a != 'O' && a != 'Q' && a != 'Q' && b != 'Ä' && b != 'Ç' && b != 'À' && b != 'Ñ' && b != 'ß' && b != 'I' && b != 'O' && b != 'Q' && b != 'Q' && c != 'Ä' && c != 'Ç' && c != 'À' && c != 'Ñ' && c != 'ß' && c != 'I' && c != 'O' && c != 'Q' && c != 'Q' && d != 'Ä' && d != 'Ç' && d != 'À' && d != 'Ñ' && d != 'ß' && d != 'I' && d != 'O' && d != 'Q' && d != 'Q' && a != 'U' && b != 'U' && c != 'U' && d != 'U') {
                         System.out.println("És una matrícula italiana vàlida"); 
                     } else {
                         System.out.println("No és una matrícula italiana vàlida");
