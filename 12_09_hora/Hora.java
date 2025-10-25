@@ -8,8 +8,9 @@ public class Hora {
             System.out.println("00:00:00");
         } else {
         
-        if (hora.length() > 6 || Character.isLetter(hora.charAt(hora.length()-1))) {
-            System.out.println("ERROR");
+        if (hora.length() > 6 || (hora.length() >= 1 && Character.isLetter(hora.charAt(0))) || (hora.length() >= 2 && Character.isLetter(hora.charAt(1))) || (hora.length() >= 3 && Character.isLetter(hora.charAt(2))) || (hora.length() >= 4 && Character.isLetter(hora.charAt(3))) || (hora.length() >= 5 && Character.isLetter(hora.charAt(4))) || (hora.length() == 6 && Character.isLetter(hora.charAt(5)))) {
+                System.out.println("ERROR");
+                
         } else if (hora.length() == 1) {
             System.out.println("00:00:0" + hora);
           } else if (hora.length() == 2) {
