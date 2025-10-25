@@ -25,6 +25,17 @@ public class Hora {
                         System.out.println("" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3) +  ":" + hora.charAt(4) + hora.charAt(5));
                   } else if (hora.charAt(0) == 0 && hora.length() > 6) {
                         System.out.println("" + hora.charAt(1) + hora.charAt(2) + ":" + hora.charAt(3) + hora.charAt(4) +  ":" + hora.charAt(5) + hora.charAt(6));  
+                        
+                        int h = Integer.parseInt("" + hora.charAt(0) + hora.charAt(1));
+                        int m = Integer.parseInt("" + hora.charAt(2) + hora.charAt(3));
+                        int s = Integer.parseInt("" + hora.charAt(4) + hora.charAt(5));
+                        
+                        if (h > 23 || m > 59 || s > 59) {
+                            System.out.println("ERROR");
+                        } else {
+                            System.out.println("" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3) + ":" + hora.charAt(4) + hora.charAt(5));
+                        }
+                    
                     }
           }  
     }
