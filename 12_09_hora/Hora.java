@@ -22,7 +22,9 @@ public class Hora {
                     System.out.println("0" + hora.charAt(0) + ":" + hora.charAt(1) + hora.charAt(2) +  ":" + hora.charAt(3) + hora.charAt(4));
                   } else if (hora.length() == 6) {
                         System.out.println("" + hora.charAt(0) + hora.charAt(1) + ":" + hora.charAt(2) + hora.charAt(3) +  ":" + hora.charAt(4) + hora.charAt(5));
-                  }
+                  } else if (hora.charAt(0) == 0 && hora.length() > 6) {
+                        System.ot.println(System.out.println("" + hora.charAt(1) + hora.charAt(2) + ":" + hora.charAt(3) + hora.charAt(4) +  ":" + hora.charAt(5) + hora.charAt(6));  
+                    }
           }  
     }
 } 
