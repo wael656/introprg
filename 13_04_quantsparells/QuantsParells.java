@@ -8,7 +8,7 @@ public class QuantsParells {
            System.out.println("Introdueix un valor");
            valor = Integer.parseInt(Entrada.readLine());
            
-           if (valor % 2 == 0) {
+           if (valor % 2 == 0 && valor >= 0) {
             comptador++;
            } 
         }
