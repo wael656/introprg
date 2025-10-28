@@ -10,7 +10,7 @@ public class Estadistiques {
         System.out.println("Introdueix un valor");
         int valor = Integer.parseInt(Entrada.readLine());
         if (valor < 0) {
-            System.out.println("Cap nota vàlida introduïda");
+            System.out.println("Cap valor vàlid introduït");
         } else {
         
         while (valor > -1) {
