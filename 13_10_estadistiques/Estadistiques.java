@@ -24,7 +24,7 @@ public class Estadistiques {
                 minim = valor;
             }
             
-            System.out.println("Introduiex un valor");
+            System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());              
         }
         mitjana = suma / comptador;
