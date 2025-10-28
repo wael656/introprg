@@ -1,8 +1,8 @@
 /*Desenvolupa un programa anomenat Estadistiques, que vagi demanant enters positius i que, en el moment que rebi un de negatiu. Un cop finalitzada la càrrega de dades, el programa mostrarà els següents estadístics respecte el que ha rebut:*/
 public class Estadistiques {
     public static void main(String[] args) {
-        float suma = 0;
-        float mitjana = 0;
+        double suma = 0;
+        double mitjana = 0;
         int maxim = 0;
         int minim = 999999999;
         int comptador = 0;
