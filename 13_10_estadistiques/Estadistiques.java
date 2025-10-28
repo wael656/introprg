@@ -7,8 +7,11 @@ public class Estadistiques {
         int minim = 1000;
         int comptador = 0;
         
-        System.out.println("Introduiex un valor");
+        System.out.println("Introdueix un valor");
         int valor = Integer.parseInt(Entrada.readLine());
+        if (valor > -1) {
+            System.out.println("Cap nota vàlida introduïda");
+        } else {
         
         while (valor > -1) {
             suma += valor;
@@ -28,5 +31,6 @@ public class Estadistiques {
         System.out.println("El mínim és: " + minim);
         System.out.println("La mitjana és: " + mitjana);
         System.out.println("El màxim és: " + maxim);
+        }
     }
 }
