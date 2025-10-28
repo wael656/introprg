@@ -4,7 +4,7 @@ public class Estadistiques {
         float suma = 0;
         float mitjana = 0;
         int maxim = 0;
-        int minim = 1000;
+        int minim = 999999999;
         int comptador = 0;
         
         System.out.println("Introdueix un valor");
