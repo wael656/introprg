@@ -9,9 +9,11 @@ public class LloroVocalIniFi {
         while (!entrada.isBlank()) {
             char primer = eMinuscula.charAt(0);
             char ultim = eMinuscula.charAt(eMinuscula.length() - 1);
-            
+            if (primer == 'a' || primer == 'e' || primer == 'i' || primer == 'o' || primer == 'u') {
+                        
                 if (primer == ultim) {
                 System.out.println("Repeteixo: " + entrada);
+            }
             }
             System.out.println("Paraula?");
             entrada = Entrada.readLine();
