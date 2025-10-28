@@ -2,7 +2,7 @@
 public class Mitjana {
     public static void main(String[] args) {
         int comptador = 0;
-        int suma = 0;
+        float suma = 0;
         float mitjana = 0;
         
         System.out.println("Introdueix un valor");
