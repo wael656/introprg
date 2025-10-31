@@ -7,13 +7,13 @@ public class EndevinaNombre {
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
         
         
-            while (endevina != valor || entrada.isBlank()) {            
+            while (endevina != valor) {            
                 System.out.println("Introdueix un valor");
                 entrada = Entrada.readLine();
                
                 if (entrada.isBlank()) {
                     System.out.println("Cancel·lat!");
-                    break;
+                    endevina = valor;
                 } else { 
                     valor = Integer.parseInt(entrada);
                 
