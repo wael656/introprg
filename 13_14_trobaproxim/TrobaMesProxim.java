@@ -27,7 +27,7 @@ public class TrobaMesProxim {
         if (diferenciaMin == Integer.MAX_VALUE) {
             System.out.println("No s'han introduït números vàlids.");
         } else {
-            System.out.println("El valor introduït més pròxim a " + ancora + " és: " + mesCercano);
+            System.out.println("El valor introduït més pròxim a " + ancora + " és " + mesCercano);
         }
         
         }    
