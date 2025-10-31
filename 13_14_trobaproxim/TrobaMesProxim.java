@@ -1,7 +1,7 @@
 /*Aquest repte consisteix en desenvolupar un programa anomenat TrobaMesProxim, que començarà demanant un valor (l'àncora) i després un seguit de nombres. Finalment el programa indicarà quin dels nombres introduïts és més pròxim a l'àncora.*/
 public class TrobaMesProxim {
     public static void main(String[] args) {
-        System.out.println("Introdueix l'àncora:");
+        System.out.println("Introdueix l'àncora");
         int ancora = Integer.parseInt(Entrada.readLine());
         if (ancora < 0) {
             System.out.println("Àncora no vàlida");
