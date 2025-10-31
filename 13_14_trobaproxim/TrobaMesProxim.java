@@ -18,7 +18,7 @@ public class TrobaMesProxim {
 
             int diferencia = Math.abs(num - ancora);
 
-            if (diferencia < diferenciaMin) {
+            if (diferencia < diferenciaMin || (diferencia == diferenciaMin && num < mesCercano)) {
                 diferenciaMin = diferencia;
                 mesCercano = num;
             }
