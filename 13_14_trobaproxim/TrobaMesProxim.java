@@ -11,9 +11,9 @@ public class TrobaMesProxim {
         int mesCercano = 0;
         int diferenciaMin = Integer.MAX_VALUE; 
         
-        System.out.println("Introdueix un valor");
 
         while (num > 0) {
+            System.out.println("Introdueix un valor");
             num = Integer.parseInt(Entrada.readLine());
 
             int diferencia = Math.abs(num - ancora);
