@@ -3,14 +3,15 @@ public class NaturalsEntre {
     public static void main(String[] args) {
         System.out.println("Valor inicial?");
         int valorI = Integer.parseInt(Entrada.readLine());
-        System.out.println("Valor final?");
-        int valorF = Integer.parseInt(Entrada.readLine());
-        System.out.println("Salt?");
-        int salt = Integer.parseInt(Entrada.readLine());
-        
-        if (valorI < 0 || valorF < 0 || salt < 0) {
+               
+        if (valorI < 0) {
             System.out.println("Valor no vàlid");
         } else {
+        
+            System.out.println("Valor final?");
+            int valorF = Integer.parseInt(Entrada.readLine());
+            System.out.println("Salt?");
+            int salt = Integer.parseInt(Entrada.readLine());
          
             int i = valorI;        
             while (i <= valorF) {
