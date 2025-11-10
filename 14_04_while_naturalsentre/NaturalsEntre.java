@@ -23,7 +23,7 @@ public class NaturalsEntre {
                     System.out.println("Salt?");
                     salt = Integer.parseInt(Entrada.readLine());
                     
-                    if (salt < 0) {
+                    if (salt < 0 || salt == 0) {
                         System.out.println("Valor no vàlid");
                     } else {
                 
