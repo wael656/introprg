@@ -12,16 +12,17 @@ public class NaturalsEntre {
         
             System.out.println("Valor final?");
             valorF = Integer.parseInt(Entrada.readLine());
-            if (valorF < 0) {
-                System.out.println("Valor no vàlid");
-            } else {
-                System.out.println("Salt?");
-                salt = Integer.parseInt(Entrada.readLine());
-                
-                if (valorI > valorF) {
+            
+            if (valorI > valorF) {
                     System.out.println("Error");
+            } else {
+            
+                if (valorF < 0) {
+                    System.out.println("Valor no vàlid");
                 } else {
-                
+                    System.out.println("Salt?");
+                    salt = Integer.parseInt(Entrada.readLine());
+                    
                     if (salt < 0) {
                         System.out.println("Valor no vàlid");
                     } else {
