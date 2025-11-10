@@ -3,21 +3,30 @@ public class TrobaMesProxim {
     public static void main(String[] args) {
         System.out.println("Introdueix l'àncora");
         int ancora = Integer.parseInt(Entrada.readLine());
-        System.out.println("Introdueix un valor");
-        int valor = Integer.parseInt(Entrada.readLine());
-        int menor = valor;
-        int diferencia = ancora - valor;
-        
-        
-        while (valor >= 0) {
-            if (diferencia < menor) {
-                menor = diferencia;
-            }
-            
+        int valor = 0;
+        int proxim;
+        if (ancora >= 0) {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
-      
+            proxim = valor;
+            if (valor < 0) {
+                System.out.println("No s'ha introduït cap valor positiu");
+            } else {
+                while (valor >= 0) {
+                    if (Math.abs(ancora - valor) < Math.abs(ancora - proxim)) {
+                        proxim = valor;
+                    } else if (Math.abs(ancora - valor) == Math.abs(ancora - proxim)) {
+                            if (valor < proxim) {
+                                proxim = valor;
+                            }
+                        }
+                        System.out.println("Introdueix un valor");
+                        valor = Integer.parseInt(Entrada.readLine());
+                }
+                System.out.println("El valor introduït més pròxim a " + ancora + " és " + proxim);
+            }
+        } else {
+                System.out.println("Àncora no vàlida");
         }
-        System.out.println("El valor introduït més pròxim a " + ancora + " és " + menor);
     }
 }
