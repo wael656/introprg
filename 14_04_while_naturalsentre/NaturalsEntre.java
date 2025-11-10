@@ -14,7 +14,7 @@ public class NaturalsEntre {
             valorF = Integer.parseInt(Entrada.readLine());
             
             if (valorI > valorF) {
-                    System.out.println("Error");
+                    System.out.println("Valor no vàlid");
             } else {
             
                 if (valorF < 0) {
