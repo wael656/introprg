@@ -18,14 +18,19 @@ public class NaturalsEntre {
                 System.out.println("Salt?");
                 salt = Integer.parseInt(Entrada.readLine());
                 
-                if (salt < 0) {
-                    System.out.println("Valor no vàlid");
+                if (valorI > valorF) {
+                    System.out.println("Error");
                 } else {
-            
-                    int i = valorI;        
-                    while (i <= valorF) {
-                        System.out.println(i);
-                        i = i + salt;
+                
+                    if (salt < 0) {
+                        System.out.println("Valor no vàlid");
+                    } else {
+                
+                        int i = valorI;        
+                        while (i <= valorF) {
+                            System.out.println(i);
+                            i = i + salt;
+                        }
                     }
                 }
             }
