@@ -8,10 +8,15 @@ public class NaturalsEntre {
         System.out.println("Salt?");
         int salt = Integer.parseInt(Entrada.readLine());
         
-        int i = valorI;        
-        while (i <= valorF) {
-            System.out.println(i);
-            i = i + salt;
+        if (valorI < 0 || valorF < 0 || salt < 0) {
+            System.out.println("Valor no vàlid");
+        } else {
+         
+            int i = valorI;        
+            while (i <= valorF) {
+                System.out.println(i);
+                i = i + salt;
+            }
         }
     }
 }
