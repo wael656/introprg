@@ -2,6 +2,9 @@
 public class NaturalsDecreixents {
     public static void main(String[] args) {
         int num = Integer.parseInt(args[0]);
+        if (num < 1) {
+            System.out.println("Cap valor decreixent entre " + num + " i -1");
+        }
         int i = num;
         while (i >= 1) {
             System.out.println(i);
