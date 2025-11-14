@@ -8,7 +8,7 @@ public class LletresInterval {
         
         if (entrada.length() > 1) {
             System.out.println("ERROR: cal especificar una única lletra.");
-        } else if (entrada.charAt(0) == '!' || entrada.charAt(0) == 'ß' || entrada.charAt(0) == 'à') {
+        } else if (entrada.charAt(0) == '!' || entrada.charAt(0) == 'ß' || entrada.charAt(0) == 'à' || entrada.charAt(0) == 'は') {
             System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");
         } else if (Character.isDigit(lletra)) {
             System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");            
