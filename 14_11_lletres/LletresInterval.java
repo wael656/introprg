@@ -11,7 +11,7 @@ public class LletresInterval {
         } else if (entrada.charAt(0) == '!') {
             System.out.println("ERROR: '!' no és una lletra vàlida.");
         } else if (Character.isDigit(lletra)) {
-            System.out.println("ERROR: " + lletra + " no és una lletra vàlida.");            
+            System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");            
         } else {
         
             System.out.println("quantes?");
