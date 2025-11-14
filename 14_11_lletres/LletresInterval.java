@@ -4,11 +4,14 @@ public class LletresInterval {
     public static void main(String[] args) {
         System.out.println("lletra?");
         String entrada = Entrada.readLine();
+        char lletra = entrada.charAt(0);
         
         if (entrada.length() > 1) {
             System.out.println("ERROR: cal especificar una única lletra.");
         } else if (entrada.charAt(0) == '!') {
             System.out.println("ERROR: '!' no és una lletra vàlida.");
+        } else if (Character.isDigit(lletra)) {
+            System.out.println("Error");            
         } else {
         
             System.out.println("quantes?");
@@ -16,8 +19,6 @@ public class LletresInterval {
             if (quantes < 1) {
                 System.out.println("Error");
             } else {       
-            
-                char lletra = entrada.charAt(0);
                 
                 if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z'))) {
                     System.out.println("Error");
