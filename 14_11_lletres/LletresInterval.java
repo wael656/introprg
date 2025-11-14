@@ -17,7 +17,7 @@ public class LletresInterval {
             
                 char lletra = entrada.charAt(0);
                 
-                if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z'))) {
+                if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z') || (lletra == '!'))) {
                     System.out.println("Error");
                 } else {
                     
