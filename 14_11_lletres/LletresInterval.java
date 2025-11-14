@@ -5,8 +5,10 @@ public class LletresInterval {
         System.out.println("lletra?");
         String entrada = Entrada.readLine();
         
-        if (entrada.length() > 1 || entrada.charAt(0) == '!') {
+        if (entrada.length() > 1) {
             System.out.println("ERROR: cal especificar una única lletra.");
+        } else if (entrada.charAt(0) == '!') {
+            System.out.println("ERROR: '!' no és una lletra vàlida.");
         } else {
         
             System.out.println("quantes?");
