@@ -5,7 +5,7 @@ public class LletresInterval {
         System.out.println("lletra?");
         String entrada = Entrada.readLine();
         
-        if (entrada.length() > 1) {
+        if (entrada.length() > 1 || entrada.charAt(0) == '!') {
             System.out.println("ERROR: cal especificar una única lletra.");
         } else {
         
@@ -17,7 +17,7 @@ public class LletresInterval {
             
                 char lletra = entrada.charAt(0);
                 
-                if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z') || (lletra == '!'))) {
+                if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z'))) {
                     System.out.println("Error");
                 } else {
                     
