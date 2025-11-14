@@ -6,7 +6,7 @@ public class LletresInterval {
         String entrada = Entrada.readLine();
         
         if (entrada.length() > 1) {
-            System.out.println("Error");
+            System.out.println("ERROR: cal especificar una única lletra.");
         } else {
         
             System.out.println("quantes?");
