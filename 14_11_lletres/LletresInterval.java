@@ -21,7 +21,7 @@ public class LletresInterval {
                 System.out.println("quantes?");
                 int quantes = Integer.parseInt(Entrada.readLine());        
                 if (quantes < 1) {
-                    System.out.println("Error");
+                    System.out.println("ERROR: una com a mínim");
                 } else {       
                     
                     if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z'))) {
