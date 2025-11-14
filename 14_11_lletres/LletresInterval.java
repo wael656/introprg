@@ -12,7 +12,9 @@ public class LletresInterval {
             System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");
         } else if (Character.isDigit(lletra)) {
             System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");            
-        } else {
+        } else if (entrada.isBlank()) {
+            System.out.println("Error");
+        }else {
         
             System.out.println("quantes?");
             int quantes = Integer.parseInt(Entrada.readLine());        
