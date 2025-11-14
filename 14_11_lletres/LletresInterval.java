@@ -6,15 +6,13 @@ public class LletresInterval {
         String entrada = Entrada.readLine();
         char lletra = entrada.charAt(0);
         
-        if (entrada.length() > 1) {
+        if (entrada.length() > 1 || entrada.isBlank()) {
             System.out.println("ERROR: cal especificar una única lletra.");
         } else if (entrada.charAt(0) == '!' || entrada.charAt(0) == 'ß' || entrada.charAt(0) == 'à' || entrada.charAt(0) == 'は') {
             System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");
         } else if (Character.isDigit(lletra)) {
             System.out.println("ERROR: " + "'" + lletra + "'" + " no és una lletra vàlida.");            
-        } else if (entrada.isBlank()) {
-            System.out.println("Error");
-        }else {
+        } else {
         
             System.out.println("quantes?");
             int quantes = Integer.parseInt(Entrada.readLine());        
