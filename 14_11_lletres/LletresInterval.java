@@ -4,36 +4,38 @@ public class LletresInterval {
     public static void main(String[] args) {
         System.out.println("lletra?");
         String entrada = Entrada.readLine();
-        System.out.println("quantes?");
-        int quantes = Integer.parseInt(Entrada.readLine());
-        
-        if (quantes < 1) {
-            System.out.println("Error");
-        }
         
         if (entrada.length() > 1) {
             System.out.println("Error");
         } else {
-            char lletra = entrada.charAt(0);
-            
-            if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z'))) {
+        
+            System.out.println("quantes?");
+            int quantes = Integer.parseInt(Entrada.readLine());        
+            if (quantes < 1) {
                 System.out.println("Error");
-            } else {
+            } else {       
+            
+                char lletra = entrada.charAt(0);
                 
-                char actual = lletra;
-                
-                for (int i = 0; i < quantes; i++) {
-                    System.out.print(actual);
-                    if (actual == 'z') {
-                        actual = 'a';
-                    } else if (actual == 'Z') {
-                        actual = 'A';
-                    } else {
-                        actual++;
+                if (!((lletra >= 'a' && lletra <= 'z') || (lletra >= 'A' && lletra <= 'Z'))) {
+                    System.out.println("Error");
+                } else {
+                    
+                    char actual = lletra;
+                    
+                    for (int i = 0; i < quantes; i++) {
+                        System.out.print(actual);
+                        if (actual == 'z') {
+                            actual = 'a';
+                        } else if (actual == 'Z') {
+                            actual = 'A';
+                        } else {
+                            actual++;
+                        }
                     }
-                }
-                System.out.println();    
-            }            
+                    System.out.println();    
+                }            
+            }
         }
     }
 }
