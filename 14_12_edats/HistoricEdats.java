@@ -13,21 +13,27 @@ public class HistoricEdats {
             } else {
                 System.out.println("any actual?");
                 int anyActual = Integer.parseInt(Entrada.readLine());
-                if (anyActual < 1971) {
-                    System.out.println("Error");
-                } else {
-                    int anyNaixament = anyActual - edat;
-                    System.out.println("El " + anyNaixament + " vau néixer");
-                    
-                    for (int i = anyNaixament + 1; i < anyActual; i++) {
-                        int anyAbans = i - anyNaixament;
-                        if (anyAbans == 1) {
-                            System.out.println("El " + i + " teníeu " + anyAbans + " any");
-                        } else {
-                            System.out.println("El " + i + " teníeu " + anyAbans + " anys");
-                        }
-                    }
+                
+                if (edat == 0) {
                     System.out.println("Adéu " + nom);
+                } else {
+                
+                    if (anyActual < 1971) {
+                        System.out.println("Error");
+                    } else {
+                        int anyNaixament = anyActual - edat;
+                        System.out.println("El " + anyNaixament + " vau néixer");
+                        
+                        for (int i = anyNaixament + 1; i < anyActual; i++) {
+                            int anyAbans = i - anyNaixament;
+                            if (anyAbans == 1) {
+                                System.out.println("El " + i + " teníeu " + anyAbans + " any");
+                            } else {
+                                System.out.println("El " + i + " teníeu " + anyAbans + " anys");
+                            }
+                        }
+                        System.out.println("Adéu " + nom);
+                    }
                 }
             }
         }
