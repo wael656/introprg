@@ -8,18 +8,20 @@ public class HistoricEdats {
         } else {
             System.out.println("edat?");
             int edat = Integer.parseInt(Entrada.readLine());
-            if (edat < 0) {
-                System.out.println("Error");
+
+            System.out.println("any actual?");
+            int anyActual = Integer.parseInt(Entrada.readLine());
+            
+            if (edat == 0) {
+                System.out.println("Adéu " + nom);
             } else {
-                System.out.println("any actual?");
-                int anyActual = Integer.parseInt(Entrada.readLine());
-                
-                if (edat == 0) {
-                    System.out.println("Adéu " + nom);
+            
+                if (anyActual < 1971) {
+                    System.out.println("Error");
                 } else {
                 
-                    if (anyActual < 1971) {
-                        System.out.println("Error");
+                    if (edat < 0) {
+                       System.out.println("Entrada incorrecta");
                     } else {
                         int anyNaixament = anyActual - edat;
                         System.out.println("El " + anyNaixament + " vau néixer");
