@@ -15,7 +15,7 @@ public class HistoricEdats {
             } else {
             
                 if (anyActual < 1971) {
-                    System.out.println("Error");
+                    System.out.println("Entrada incorrecta");
                 } else {
                 
                     if (edat < 0) {
