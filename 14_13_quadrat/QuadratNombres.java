@@ -6,11 +6,15 @@ public class QuadratNombres {
         System.out.println("Valor final?");
         int n = Integer.parseInt(Entrada.readLine());
         
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                System.out.print(j + " ");
+        if (n < 1) {
+            System.out.println("Valor inadequat");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    System.out.print(j + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
     }
 }
