@@ -6,7 +6,7 @@ public class QuadratNombres {
         System.out.println("Valor final?");
         int n = Integer.parseInt(Entrada.readLine());
         
-        if (n < 1) {
+        if (n < 1 || n > 9) {
             System.out.println("Valor inadequat");
         } else {
             for (int i = 1; i <= n; i++) {
