@@ -11,7 +11,7 @@ public class Triangle {
             System.out.println();
         } else {
             
-            while (cont <= num) {
+            for (int rep = 0; rep < num; rep++) {
                 
                 for (int i = 0; i <= 9; i++) {
                 
