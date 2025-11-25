@@ -5,7 +5,6 @@ public class Triangle {
     public static void main(String[] args) {
         System.out.println("quants?");
         int num = Integer.parseInt(Entrada.readLine());
-        int cont = 1;
         
         if (num < 1) {
             System.out.println();
@@ -33,7 +32,6 @@ public class Triangle {
                     
                         System.out.println();
                     }
-                    cont++;
                 }
         }
     }
