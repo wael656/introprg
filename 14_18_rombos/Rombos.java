@@ -11,7 +11,7 @@ public class Rombos {
             System.out.println();
         } else {
             
-            while (cont <= num) {
+            for (int rep = 0; rep < num; rep++) {
                 
                 for (int i = 0; i <= 9; i++) {
                 
@@ -55,9 +55,7 @@ public class Rombos {
                     
                     System.out.println();
                 }
-                    
-                    cont++;
-                }
+            }
         }
     }
 }
