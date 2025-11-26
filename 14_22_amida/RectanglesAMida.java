@@ -13,28 +13,33 @@ public class RectanglesAMida {
         int rectangles = 0;
         int punts = 0;
         
-        while (num > -1) {
-            System.out.print("  ");
-            for (int i = 0; i < num; i++) {
-                System.out.print(i % 10);
-            }
-            System.out.println();
-        
-            for (int i = 0; i < primer; i++) {
-                System.out.print(i + " ");
-                for (int j = 1; j <= num; j++) {
-                    System.out.print("*");
-                    punts++;
+        if (num < 0) {
+            System.out.println("Cap rectangle dibuixat");
+        } else {
+            
+            while (num > -1) {
+                System.out.print("  ");
+                for (int i = 0; i < num; i++) {
+                    System.out.print(i % 10);
                 }
                 System.out.println();
-            }
-            primer = num;
             
-            System.out.println(num + " x " + "?");
-            num = Integer.parseInt(Entrada.readLine());
-            rectangles++;
-        }
-        System.out.println("Rectangles: " + rectangles);   
-        System.out.println("Punts: " + punts);        
+                for (int i = 0; i < primer; i++) {
+                    System.out.print(i + " ");
+                    for (int j = 1; j <= num; j++) {
+                        System.out.print("*");
+                        punts++;
+                    }
+                    System.out.println();
+                }
+                primer = num;
+                
+                System.out.println(num + " x " + "?");
+                num = Integer.parseInt(Entrada.readLine());
+                rectangles++;
+            }
+            System.out.println("Rectangles: " + rectangles);   
+            System.out.println("Punts: " + punts);   
+        }     
     }
 }
