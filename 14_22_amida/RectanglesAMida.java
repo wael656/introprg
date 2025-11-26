@@ -12,8 +12,9 @@ public class RectanglesAMida {
         int num = Integer.parseInt(Entrada.readLine());
         int rectangles = 0;
         int punts = 0;
+        String text = " " + num;
         
-        if (num < 0) {
+        if (num < 0 || text.isBlank() || text.isEmpty()) {
             System.out.println("Cap rectangle dibuixat");
         } else {
             
@@ -37,9 +38,13 @@ public class RectanglesAMida {
                 System.out.println(num + " x " + "?");
                 num = Integer.parseInt(Entrada.readLine());
                 rectangles++;
+                text = " " + num;
             }
-            System.out.println("Rectangles: " + rectangles);   
-            System.out.println("Punts: " + punts);   
+            
+            if (num < 0 || text.isBlank()) {
+                System.out.println("Rectangles: " + rectangles);   
+                System.out.println("Punts: " + punts);   
+            }
         }     
     }
 }
