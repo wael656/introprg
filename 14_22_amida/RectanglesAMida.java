@@ -47,9 +47,9 @@ public class RectanglesAMida {
                     if (text.isBlank() || text.isEmpty()) {
                         num = -1;
                     } else {
-                        num = Integer.parseInt(text);
-                        rectangles++;
+                        num = Integer.parseInt(text);                        
                       }
+                      rectangles++;
                 }
                 
                 System.out.println("Rectangles: " + rectangles);   
