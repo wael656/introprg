@@ -14,7 +14,7 @@ public class RectanglesAMida {
         int punts = 0;
         
         while (num > -1) {
-            
+            System.out.print("  ");
             for (int i = 0; i < num; i++) {
                 System.out.print(i % 10);
             }
