@@ -32,7 +32,7 @@ public class RectanglesAMida {
                     System.out.println();
                 
                     for (int i = 0; i < primer; i++) {
-                        System.out.print(i + " ");
+                        System.out.print(i % 10 + " ");
                         for (int j = 1; j <= num; j++) {
                             System.out.print("*");
                             punts++;
