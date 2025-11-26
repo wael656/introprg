@@ -11,7 +11,7 @@ public class RectanglesAMida {
         System.out.println("1 x ?");
         String text = Entrada.readLine();
         
-        if (text.isBlank() || text.isEmpty()) {
+        if (text.isBlank()) {
             System.out.println("Cap rectangle dibuixat");
         } else {
             
