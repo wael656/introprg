@@ -9,42 +9,52 @@ public class RectanglesAMida {
     public static void main(String[] args) {
         int primer = 1;
         System.out.println("1 x ?");
-        int num = Integer.parseInt(Entrada.readLine());
-        int rectangles = 0;
-        int punts = 0;
-        String text = " " + num;
+        String text = Entrada.readLine();
         
-        if (num < 0 || text.isBlank() || text.isEmpty()) {
+        if (text.isBlank() || text.isEmpty()) {
             System.out.println("Cap rectangle dibuixat");
         } else {
             
-            while (num > -1) {
-                System.out.print("  ");
-                for (int i = 0; i < num; i++) {
-                    System.out.print(i % 10);
-                }
-                System.out.println();
+            int num = Integer.parseInt(text);
+            int rectangles = 0;
+            int punts = 0;
             
-                for (int i = 0; i < primer; i++) {
-                    System.out.print(i + " ");
-                    for (int j = 1; j <= num; j++) {
-                        System.out.print("*");
-                        punts++;
+            if (num < 0) {
+                System.out.println("Cap rectangle dibuixat");
+            } else {
+                
+                while (num > -1) {
+                
+                    System.out.print("  ");
+                    for (int i = 0; i < num; i++) {
+                        System.out.print(i % 10);
                     }
                     System.out.println();
-                }
-                primer = num;
                 
-                System.out.println(num + " x " + "?");
-                num = Integer.parseInt(Entrada.readLine());
-                rectangles++;
-                text = " " + num;
-            }
-            
-            if (num < 0 || text.isBlank()) {
+                    for (int i = 0; i < primer; i++) {
+                        System.out.print(i + " ");
+                        for (int j = 1; j <= num; j++) {
+                            System.out.print("*");
+                            punts++;
+                        }
+                        System.out.println();
+                    }
+                    primer = num;
+                    
+                    
+                    System.out.println(num + " x " + "?");
+                    text = Entrada.readLine();
+                    if (text.isBlank() || text.isEmpty()) {
+                        num = -1;
+                    } else {
+                        num = Integer.parseInt(text);
+                        rectangles++;
+                      }
+                }
+                
                 System.out.println("Rectangles: " + rectangles);   
                 System.out.println("Punts: " + punts);   
-            }
-        }     
+            }     
+        }
     }
 }
