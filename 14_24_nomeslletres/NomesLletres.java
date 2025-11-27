@@ -11,9 +11,9 @@ public class NomesLletres {
                 System.out.print(c + ", ");
             }
         }
-        if (Character.isLetter(ultim)) {
+      //  if (Character.isLetter(ultim)) {
             System.out.print(ultim);
-        }
+        //}
         System.out.println();
     }
 }
