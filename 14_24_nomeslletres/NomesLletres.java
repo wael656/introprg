@@ -3,13 +3,21 @@ public class NomesLletres {
     public static void main(String[] args) {
         System.out.println("Text?");
         String entrada = Entrada.readLine();
-        char ultim = entrada.charAt(entrada.length() - 1);
+        String nou = "";
         
-        for (int i = 0; i < entrada.length()-1; i++) {
+        
+        for (int i = 0; i < entrada.length(); i++) {
             char c = entrada.charAt(i);
             if (Character.isLetter(c)) {
-                System.out.print(c);
+                nou+=c;
             }
+        }
+        
+        char ultim = nou.charAt(nou.length() - 1);
+        
+        for (int i = 0; i < nou.length()-1; i++) {
+            char c = nou.charAt(i);
+            System.out.print(c + ", ");
         }
         if (Character.isLetter(ultim)) {
             System.out.print(ultim);
