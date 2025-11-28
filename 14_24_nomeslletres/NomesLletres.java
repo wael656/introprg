@@ -8,12 +8,12 @@ public class NomesLletres {
         for (int i = 0; i < entrada.length()-1; i++) {
             char c = entrada.charAt(i);
             if (Character.isLetter(c)) {
-                System.out.print(c + ", ");
+                System.out.print(c);
             }
         }
-      //  if (Character.isLetter(ultim)) {
+        if (Character.isLetter(ultim)) {
             System.out.print(ultim);
-        //}
+        }
         System.out.println();
     }
 }
