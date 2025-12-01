@@ -16,54 +16,58 @@ public class Distribuidor {
         while (!entrada.isBlank()) {
             for (int i = 0; i < majuscules.length(); i++) {
                 char c = majuscules.charAt(i);
-                boolean repetit = false;
                 
-                if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'À' || c == 'É' || c == 'Ï' || c == 'Ò' || c == 'Ó' || c == 'Ú') {
-                    for (int k = 0; k < vocals.length(); k++) {
-                        if (vocals.charAt(k) == c) {
-                            repetit = true;        
+                if (c !=  ' ') {
+                    boolean repetit = false;
+                
+                
+                    if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'À' || c == 'É' || c == 'Ï' || c == 'Ò' || c == 'Ó' || c == 'Ú') {
+                        for (int k = 0; k < vocals.length(); k++) {
+                            if (vocals.charAt(k) == c) {
+                                repetit = true;        
+                            }
                         }
-                    }
-                    
-                    if (!repetit) {
-                        vocals+=c;
-                    }
-                    
                         
-                } else if (Character.isDigit(c)) {
-                    for (int k = 0; k < num.length(); k++) {
-                        if (num.charAt(k) == c) {
-                            repetit = true;
+                        if (!repetit) {
+                            vocals+=c;
                         }
-                    }
-                    
-                    if (!repetit) {
-                        num+=c;
-                    }               
-                    
-                  }  
-                  if (!Character.isDigit(c) && !Character.isLetter(c)) {
-                    for (int k = 0; k < simbols.length(); k++) {
-                        if (simbols.charAt(k) == c)  {
-                            repetit = true;
-                        }
-                    }
-                    
-                    if (!repetit) {
-                        simbols+=c;
-                    }
-                  }    
-                
-                for (int j = 0; j < consonants.length(); j++) {
-                    if (c == consonants.charAt(j)) {
-                        for (int k = 0; k < cons.length(); k++) {
-                            if (cons.charAt(k) == c) {
+                        
+                            
+                    } else if (Character.isDigit(c)) {
+                        for (int k = 0; k < num.length(); k++) {
+                            if (num.charAt(k) == c) {
                                 repetit = true;
                             }
                         }
                         
                         if (!repetit) {
-                            cons+=c;
+                            num+=c;
+                        }               
+                        
+                      }  
+                      if (!Character.isDigit(c) && !Character.isLetter(c)) {
+                        for (int k = 0; k < simbols.length(); k++) {
+                            if (simbols.charAt(k) == c)  {
+                                repetit = true;
+                            }
+                        }
+                        
+                        if (!repetit) {
+                            simbols+=c;
+                        }
+                      }    
+                    
+                    for (int j = 0; j < consonants.length(); j++) {
+                        if (c == consonants.charAt(j)) {
+                            for (int k = 0; k < cons.length(); k++) {
+                                if (cons.charAt(k) == c) {
+                                    repetit = true;
+                                }
+                            }
+                            
+                            if (!repetit) {
+                                cons+=c;
+                            }
                         }
                     }
                 }
@@ -78,3 +82,5 @@ public class Distribuidor {
         System.out.println("Símbols: " + simbols);
     }
 }
+
+
