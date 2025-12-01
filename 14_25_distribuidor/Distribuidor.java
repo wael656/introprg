@@ -5,7 +5,6 @@ public class Distribuidor {
     public static void main(String[] args) {
         System.out.println("Introduïu texts (INTRO per finalitzar)");
         String entrada = Entrada.readLine();
-        String majuscules = entrada.toUpperCase();
         String vocals = "";
         String cons = "";
         String num = "";
@@ -14,8 +13,9 @@ public class Distribuidor {
         
         
         while (!entrada.isBlank()) {
-            for (int i = 0; i < majuscules.length(); i++) {
-                char c = majuscules.charAt(i);
+            for (int i = 0; i < entrada.length(); i++) {
+                char original = entrada.charAt(i);
+                char c = Character.toUpperCase(original);
                 
                 if (c !=  ' ') {
                     boolean repetit = false;
@@ -74,7 +74,6 @@ public class Distribuidor {
             }
             
              entrada = Entrada.readLine();
-             majuscules = entrada.toUpperCase();
         }
         System.out.println("Vocals: " + vocals);
         System.out.println("Consonants: " + cons);
