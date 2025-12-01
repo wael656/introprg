@@ -10,7 +10,7 @@ public class Distribuidor {
         String cons = "";
         String num = "";
         String simbols = "";
-        String consonants = "QWRTYPSDFGHJKLZXCVBNM";
+        String consonants = "QWRTYPSDFGHJKLZXCVBNMß";
         
         
         while (!entrada.isBlank()) {
