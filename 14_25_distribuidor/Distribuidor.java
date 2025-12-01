@@ -3,7 +3,7 @@
 El lloro anirà distribuint els diferents caracters que vagi rebent en quatre cadenes: una de consonants, una altra per les vocals, una de números i una d'altres símbols. Els guardarà en l'ordre en que els rep però sense repetits.*/
 public class Distribuidor {
     public static void main(String[] args) {
-        System.out.println("Introduïu text (INTRO per finalitzar)");
+        System.out.println("Introduïu texts (INTRO per finalitzar)");
         String entrada = Entrada.readLine();
         String majuscules = entrada.toUpperCase();
         String vocals = "";
