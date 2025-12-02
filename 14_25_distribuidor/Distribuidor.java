@@ -21,7 +21,7 @@ public class Distribuidor {
                     boolean repetit = false;
                 
                 
-                    if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'À' || c == 'É' || c == 'Ï' || c == 'Ò' || c == 'Ó' || c == 'Ú' || c == 'È') {
+                    if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'À' || c == 'É' || c == 'Ï' || c == 'Ò' || c == 'Ó' || c == 'Ú' || c == 'È' || c == 'Ü') {
                         for (int k = 0; k < vocals.length(); k++) {
                             if (vocals.charAt(k) == c) {
                                 repetit = true;        
