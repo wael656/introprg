@@ -75,8 +75,12 @@ public class Distribuidor {
             
              entrada = Entrada.readLine();
         }
-        System.out.println("Vocals: " + vocals);
-        System.out.println("Consonants: " + cons);
+        if (!vocals.isBlank()) {
+            System.out.println("Vocals: " + vocals);
+        }
+        if (!cons.isBlank()) {
+            System.out.println("Consonants: " + cons);
+        }
         if (!num.isBlank()) {
             System.out.println("Nombres: " + num);
         }
