@@ -14,8 +14,8 @@ public class Distribuidor {
         
         while (!entrada.isBlank()) {
             for (int i = 0; i < entrada.length(); i++) {
-                char original = entrada.charAt(i);
-                char c = Character.toUpperCase(original);
+                char c = entrada.charAt(i);
+                c = Character.toUpperCase(c);
                 
                 if (c !=  ' ') {
                     boolean repetit = false;
@@ -80,7 +80,7 @@ public class Distribuidor {
         if (!num.isBlank()) {
             System.out.println("Nombres: " + num);
         }
-        if (simbols.isBlank()) {
+        if (!simbols.isBlank()) {
             System.out.println("Símbols: " + simbols);
         }
     }
