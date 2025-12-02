@@ -5,28 +5,23 @@ public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        System.out.println("Nombre?");
-        int num = Integer.parseInt(Entrada.readLine());
-        int guardar = 0;
-        
-        if (num > text.length() - 1) {            
-            guardar = num;
-            num = text.length() - 1;
+        if (text.isBlank()) {
+            System.out.println("Error");
+        } else {
+            System.out.println("Nombre?");
+            int num = Integer.parseInt(Entrada.readLine());
+            
+            if (num < 0) {
+                System.out.println();
+            } else { 
+            
+                for (int i = 0; i < num; i++) {
+                    int index = i % text.length();
+                    char c = text.charAt(index);
+                    System.out.print(c); 
+                }
+                System.out.println();
+            }
         }
-        
-        for (int i = 0; i <= num; i++) {
-            char c = text.charAt(i);
-            System.out.print(c); 
-        }
-        num = guardar;
-        if (num > text.length() - 1) {            
-           int modul = num - (text.length() -1);
-           
-           for (int i = 0; i < modul - 1; i++) {
-               char c = text.charAt(i);
-               System.out.print(c); 
-           }
-        }
-        System.out.println();
     }
 }
