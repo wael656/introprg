@@ -77,9 +77,11 @@ public class Distribuidor {
         }
         System.out.println("Vocals: " + vocals);
         System.out.println("Consonants: " + cons);
-        System.out.println("Nombres: " + num);
-        System.out.println("Símbols: " + simbols);
+        if (!num.isBlank()) {
+            System.out.println("Nombres: " + num);
+        }
+        if (simbols.isBlank()) {
+            System.out.println("Símbols: " + simbols);
+        }
     }
 }
-
-
