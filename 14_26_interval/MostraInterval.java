@@ -12,6 +12,10 @@ public class MostraInterval {
         if (inici < 0) {
             inici = 0;
         }
+        
+        if (inici > text.length()-1) {
+            inici = text.length() -1;
+        } 
         System.out.println("final?");
         int fin = Integer.parseInt(Entrada.readLine());
         if (fin > text.length()-1) {
