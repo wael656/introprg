@@ -13,7 +13,8 @@ public class Enters {
             boolean esDigit = true;
             for (int i = 0; i < text.length(); i++) {
                 char n = text.charAt(i); 
-                if (!Character.isDigit(n) || text.charAt(n) == ' ') {
+                
+                if (!Character.isDigit(n) || n == ' ') {
                     esDigit = false;
                 } 
                 
