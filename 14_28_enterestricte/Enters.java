@@ -7,17 +7,21 @@ public class Enters {
     public static void main(String[] args) {
         System.out.println("Introdueix els texts a analitzar:");
         String text = Entrada.readLine();
-        boolean esDigit = true;
+
         
         while (!text.isBlank()) {
-            
+            boolean esDigit = true;
             for (int i = 0; i < text.length(); i++) {
                 char n = text.charAt(i); 
-                if (Character.isDigit(n) && text.charAt(0) != ' ') {
-                    esDigit = true;
-                } else if (Character.isDigit(n) && (text.charAt(0) == '-' || text.charAt(0) == '+')) {
-                    esDigit = true;
-                } else {
+                if (!Character.isDigit(n) && text.charAt(n) == ' ') {
+                    esDigit = false;
+                } 
+                
+                if (text.charAt(0) == '-' || text.charAt(0) == '+') {
+                    esDigit = true;                    
+                } 
+                
+                if ((text.charAt(0) == '-' || text.charAt(0) == '+') && (text.charAt(1) == '-' || text.charAt(1) == '+')) {
                     esDigit = false;
                 }
             }
