@@ -10,6 +10,7 @@ public class Enters {
         boolean esDigit = true;
         
         while (!text.isBlank()) {
+            
             for (int i = 0; i < text.length(); i++) {
                 char n = text.charAt(i); 
                 if (Character.isDigit(n) && text.charAt(0) != ' ') {
