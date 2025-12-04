@@ -33,6 +33,10 @@ public class Enters {
                     esEnter = true;
                 }
                 
+                if (n == ' ' && (entrada.charAt(0) == '-' || entrada.charAt(0) == '+')) {
+                    esEnter = true;
+                }
+                
                 if ((entrada.charAt(0) == '-' || entrada.charAt(0) == '+') && (entrada.charAt(1) == '-' || entrada.charAt(1) == '+')) {
                     esEnter = false;
                 }            
