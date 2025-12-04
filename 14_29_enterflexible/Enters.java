@@ -44,6 +44,6 @@ public class Enters {
             }
             entrada = Entrada.readLine();
         }
-        System.out.println("Adèu");    
+        System.out.println("Adéu");    
     }
 }
