@@ -22,7 +22,8 @@ public class EndevinaNombre {
             
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
-                if (!Character.isDigit(c)) {
+                char primer = text.charAt(0);
+                if (!Character.isDigit(c) && primer != '+' && primer != '-') {
                     System.out.println("Només nombres");
                     System.out.println("Nombre?");
                     text = Entrada.readLine();
