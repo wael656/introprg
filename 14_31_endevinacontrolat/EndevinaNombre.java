@@ -40,7 +40,7 @@ public class EndevinaNombre {
                 } else if (valor > endevina) {
                     System.out.println("És més petit que " + valor);
                 } else if (valor == endevina) {
-                    System.out.println("Has encertat!");
+                    System.out.println("Encertat!");
                     return;
                 }                   
         }
