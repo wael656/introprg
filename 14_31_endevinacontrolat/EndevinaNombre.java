@@ -32,13 +32,13 @@ public class EndevinaNombre {
             int valor = Integer.parseInt(text);
         
             if (valor < endevina && valor < 101 && valor > 0) {
-                System.out.println("És més gran que " + valor);   
+                System.out.println("Massa gran");   
                 } else if (valor > 100) {
                     System.out.println("Fora de rang");
                 } else if (valor < 1) {
                     System.out.println("Fora de rang");
                 } else if (valor > endevina) {
-                    System.out.println("És més petit que " + valor);
+                    System.out.println("Massa petit");
                 } else if (valor == endevina) {
                     System.out.println("Encertat!");
                     return;
