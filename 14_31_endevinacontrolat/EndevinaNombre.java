@@ -16,7 +16,7 @@ public class EndevinaNombre {
             System.out.println("Nombre?");
             text = Entrada.readLine();
             if (text.isBlank()) {
-                System.out.println("Cancel·lat");
+                System.out.println("Cancel·lat!");
                 break;
             }
             
