@@ -83,7 +83,7 @@ public class Password {
                 System.out.println("El password ha de contenir com a mínim un símbol.");
             } 
          
-            else if (!nMajus) {
+            else if (nMajus == false) {
                 System.out.println("El password no pot contenir menys majúscules que minúscules.");
             } 
 
