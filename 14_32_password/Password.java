@@ -68,7 +68,7 @@ public class Password {
 
             }
             if (!esDigit) {
-                System.out.println("El password com a mínim un número.");
+                System.out.println("El password ha de contenir com a mínim un numero.");
             } 
 
              else if (!majus) {
