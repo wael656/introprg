@@ -27,7 +27,6 @@ Aniràs descobrint els missatges a donar a partir dels errors que t'indicarà el
 Pista: No saps per on començar? Et proposo que comencis per resoldre cada regla per separat. Quan una no et passi les proves, considera provar-la en un programa a part, fins que la tinguis funcionant.*/
 public class Password {
     public static void main(String[] args) {
-        System.out.println("Contrasenya?");
         String text = Entrada.readLine();
         
         if (text.length() >= 8 && text.length() <= 16) {
@@ -73,6 +72,8 @@ public class Password {
             } else {
                 System.out.println("Invàlid");
             }
+        } else {
+            System.out.println("El password ha de tenir entre 8 i 16 caràcters.");
         }
     }
 }
