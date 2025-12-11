@@ -67,11 +67,34 @@ public class Password {
                 }
 
             }
-            if (esDigit && majus && minus && simbol && nMajus && !espais) {
-                System.out.println("correcte");
+            if (esDigit) {
+                System.out.println("Correcte");
             } else {
-                System.out.println("El password ha de contenir com a mínim un numero.");
+                System.out.println("El password com a mínim un número.");
+            } if (majus) {
+                System.out.println("Correcte");
+            } else {
+                System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
+            } if (minus) {
+                System.out.println("Correcte");
+            } else {
+                System.out.println("El password ha de contenir com a mínim una lletra minúscula.");                
+            } if (simbol) {
+                System.out.println("Correcte");
+            } else {
+                System.out.println("El password ha de contenir com a mínim un símbol.");
+            } if (nMajus) {
+                System.out.println("Correcte");
+            } else {
+                System.out.println("Incorrecte numero de majuscules");
+            } if (!espais) {
+                System.out.println("Correcte");
+            } else {
+                System.out.println("Incorrecte espais");
             }
+            
+            
+            
         } else {
             System.out.println("El password ha de tenir entre 8 i 16 caràcters.");
         }
