@@ -84,7 +84,7 @@ public class Password {
             } 
          
             else if (!nMajus) {
-                System.out.println("Incorrecte numero de majuscules");
+                System.out.println("El password no pot contenir menys majúscules que minúscules.");
             } 
 
             else if (espais == false) {
