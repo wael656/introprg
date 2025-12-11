@@ -58,15 +58,15 @@ public class Password {
                     simbol = true;
                 }
                 
-                if (majusc.length() >= minusc.length()) {
-                    nMajus = true;
-                }
-                
                 if (c == ' ') {
                     espais = true;
                 }
 
             }
+            if (majusc.length() >= minusc.length()) {
+                    nMajus = true;
+            }
+                
             if (!esDigit) {
                 System.out.println("El password ha de contenir com a mínim un numero.");
             } 
@@ -87,7 +87,7 @@ public class Password {
                 System.out.println("El password no pot contenir menys majúscules que minúscules.");
             } 
 
-            else if (espais == false) {
+            else if (espais == true) {
                 System.out.println("Incorrecte espais");
             } 
         
