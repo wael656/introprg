@@ -71,22 +71,22 @@ public class Password {
                 System.out.println("El password com a mínim un número.");
             } 
 
-             if (!majus) {
+             else if (!majus) {
                 System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
             } 
 
-             if (!minus) {
+             else if (!minus) {
                 System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
             } 
                 
-             if (!simbol) {
+             else if (!simbol) {
                 System.out.println("El password ha de contenir com a mínim un símbol.");
             } 
-             if (!nMajus) {
+             else if (!nMajus) {
                 System.out.println("Incorrecte numero de majuscules");
             } 
 
-             if (espais == false) {
+             else if (espais == false) {
                 System.out.println("Incorrecte espais");
             } 
         } else {
