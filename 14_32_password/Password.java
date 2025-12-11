@@ -70,7 +70,7 @@ public class Password {
             if (esDigit && majus && minus && simbol && nMajus && !espais) {
                 System.out.println("correcte");
             } else {
-                System.out.println("Invàlid");
+                System.out.println("El password ha de contenir com a mínim un numero.");
             }
         } else {
             System.out.println("El password ha de tenir entre 8 i 16 caràcters.");
