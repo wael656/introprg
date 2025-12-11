@@ -49,7 +49,7 @@ public class Password {
                     majusc += c;
                 }
                 
-                if (!Character.isUpperCase(c)) {
+                if (Character.isLowerCase(c)) {
                     minus = true; 
                     minusc += c;   
                 }
@@ -71,24 +71,26 @@ public class Password {
                 System.out.println("El password ha de contenir com a mínim un numero.");
             } 
 
-             else if (!majus) {
+            else if (!majus) {
                 System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
             } 
 
-             else if (!minus) {
+            else if (!minus) {
                 System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
             } 
                 
-             else if (!simbol) {
+            else if (!simbol) {
                 System.out.println("El password ha de contenir com a mínim un símbol.");
             } 
-             else if (!nMajus) {
+         
+            else if (!nMajus) {
                 System.out.println("Incorrecte numero de majuscules");
             } 
 
-             else if (espais == false) {
+            else if (espais == false) {
                 System.out.println("Incorrecte espais");
             } 
+        
         } else {
             System.out.println("El password ha de tenir entre 8 i 16 caràcters.");
         }
