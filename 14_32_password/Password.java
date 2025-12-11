@@ -27,7 +27,7 @@ Aniràs descobrint els missatges a donar a partir dels errors que t'indicarà el
 Pista: No saps per on començar? Et proposo que comencis per resoldre cada regla per separat. Quan una no et passi les proves, considera provar-la en un programa a part, fins que la tinguis funcionant.*/
 public class Password {
     public static void main(String[] args) {
-       /* System.out.println("Contrasenya?");
+        System.out.println("Contrasenya?");
         String text = Entrada.readLine();
         
         if (text.length() >= 8 && text.length() <= 16) {
@@ -73,14 +73,6 @@ public class Password {
             } else {
                 System.out.println("Invàlid");
             }
-        }*/
-        String text = "Hola";
-        
-        for (int i = 0; i < text.length(); i++) {
-            System.out.print(i + " ");
-            System.out.println(text.charAt(i));
         }
-   
-        
     }
 }
