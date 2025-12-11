@@ -88,7 +88,7 @@ public class Password {
             } 
 
             else if (espais == true) {
-                System.out.println("Incorrecte espais");
+                System.out.println("El password no pot contenir espais en blanc.");
             } 
         
         } else {
