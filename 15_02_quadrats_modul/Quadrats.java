@@ -3,11 +3,11 @@
 La sortida serà la mateixa que per la versió anterior*/
 public class Quadrats {
     public static void main(String[] args) {
-        System.out.println("Quants?");
         dibuixaQuadrats();
     }
     
     public static void dibuixaQuadrats() {
+        System.out.println("Quants?");
         int quants = Integer.parseInt(Entrada.readLine());
         for (int k = 0; k < quants; k++) {
             for (int i = 0; i < 5; i++) {
