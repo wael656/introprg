@@ -9,7 +9,7 @@ public class Quadrats {
         for (int k = 0; k < quants; k++) {
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
-                    System.out.print("X ");
+                    System.out.print(" X");
                 }
                 System.out.println();
             }
