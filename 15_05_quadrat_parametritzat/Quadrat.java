@@ -7,10 +7,14 @@ public class Quadrat {
     
     public static void dibuixaQuadrat(int valor) {
         for (int i = 0; i < valor; i++) {
-            for (int j = 0; j < valor; j++) {
-                System.out.print(" X");
-            }
-            System.out.println();
+            dibuixaLinia(valor);
         }
+    }
+    
+    public static void dibuixaLinia(int valor) {
+        for (int i = 0; i < valor; i++) {
+            System.out.print(" X");
+        }
+        System.out.println();
     }
 }
