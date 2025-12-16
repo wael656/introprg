@@ -5,7 +5,7 @@ public class Quadrat {
         dibuixaQuadrat(valor); 
     }
     
-    public static void dibuixaQuadrat(valor) {
+    public static void dibuixaQuadrat(int valor) {
         for (int i = 0; i < valor; i++) {
             for (int j = 0; j < valor; j++) {
                 System.out.print(" X");
