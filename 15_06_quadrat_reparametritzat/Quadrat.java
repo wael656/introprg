@@ -10,10 +10,14 @@ public class Quadrat {
     
     public static void dibuixaQuadrat(int num, char c) {
         for (int i = 0; i < num; i++) {
-            for (int j = 0; j < num; j++) {
-                System.out.print(" " + c);
-            }
-            System.out.println();
+            dibuixaLinia(num, c);    
         }
+    }
+    
+    public static void dibuixaLinia(int num, char c) {
+        for (int j = 0; j < num; j++) {
+            System.out.print(" " + c);
+        }
+        System.out.println();
     }
 }
