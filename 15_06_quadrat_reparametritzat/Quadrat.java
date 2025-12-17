@@ -4,11 +4,11 @@ Per simplificar, pressuposarem també que sempre ens donen aquest segon argument
 public class Quadrat {
     public static void main(String[] args) {
         int num = Integer.parseInt(args[0]);
-        String c = args[1];
+        char c = args[1].charAt(0);
         dibuixaQuadrat(num, c);
     }
     
-    public static void dibuixaQuadrat(int num, String c) {
+    public static void dibuixaQuadrat(int num, char c) {
         for (int i = 0; i < num; i++) {
             for (int j = 0; j < num; j++) {
                 System.out.print(" " + c);
