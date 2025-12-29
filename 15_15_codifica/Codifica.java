@@ -16,6 +16,9 @@ public class Codifica {
             if (c == 'z') {
                 c = 'a';
                 System.out.print(c);
+            } else if (c == 'é') {
+                c = 'é';
+                System.out.print(c);
             } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
                 c+=1;
                 System.out.print(c); 
