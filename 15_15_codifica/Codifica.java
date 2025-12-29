@@ -15,12 +15,10 @@ public class Codifica {
             char c = text.charAt(i);
             if (c == 'z') {
                 c = 'a';
-            }
-            
-            if (Character.isLetter(c) && Character.isLowerCase(c)) {
-                c+=1;
                 System.out.print(c);
-                
+            } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
+                c+=1;
+                System.out.print(c); 
             } else {
                 System.out.print(c);
             }
