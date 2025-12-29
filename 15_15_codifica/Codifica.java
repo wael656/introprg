@@ -19,6 +19,9 @@ public class Codifica {
             } else if (c == 'é') {
                 c = 'é';
                 System.out.print(c);
+            } else if (c == 'ú') {
+                c = 'ú';
+                System.out.print(c);
             } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
                 c+=1;
                 System.out.print(c); 
