@@ -14,10 +14,9 @@ public class TriangleParaules {
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             paraula+=c;
-            if (!Character.isLetter(c)) {
+            if (i == text.length() -1 || text.charAt(i+1) == ' ') {
                 System.out.println(paraula);
             }
         }
-        System.out.println(paraula);
     }
 }
