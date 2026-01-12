@@ -12,11 +12,11 @@ public class UtilitatsConfirmacio {
      * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
      * Altrament considera false.
      */
-    public static boolean respostaABoolean(String resposta) {
+    public static boolean respostaABoolean(String resposta) {       
         if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
         }
-        resposta = resposta.toLowerCase();
+        resposta = resposta.strip().toLowerCase();
         if (resposta.equals("s") || resposta.equals("y")) {
             return true;
         }
