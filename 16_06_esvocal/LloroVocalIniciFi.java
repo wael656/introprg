@@ -25,7 +25,12 @@ public class LloroVocalIniciFi {
                 char primer = entrada.charAt(0);
                 char ultim = entrada.charAt(entrada.length() - 1);
                 if (UtilString.esVocal(primer) || UtilString.esVocal(ultim)) {
-                    System.out.printf("%2d: \"%s\"%n", cont, entrada);
+                    
+                    if (cont < 10) {
+                        System.out.println("  " + cont + ": " + "\"" + entrada + "\"");
+                    } else {
+                        System.out.println(cont + ": " + "\"" + entrada + "\"");                        
+                    }
                     cont++;
             }
         }
