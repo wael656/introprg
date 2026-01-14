@@ -13,7 +13,7 @@ public class LloroVocalIniciFi {
                 System.out.println("Sortir?");
                 String resposta = Entrada.readLine();
                 if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
-                    System.out.println("Adèu");
+                    System.out.println("Adéu");
                     return;
                 } else {
                     System.out.println("Text?");
