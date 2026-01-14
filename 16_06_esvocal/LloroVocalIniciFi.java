@@ -29,7 +29,7 @@ public class LloroVocalIniciFi {
                     if (cont < 10) {
                         System.out.println("  " + cont + ": " + "\"" + entrada + "\"");
                     } else {
-                        System.out.println(cont + ": " + "\"" + entrada + "\"");                        
+                        System.out.println(" " + cont + ": " + "\"" + entrada + "\"");                        
                     }
                     cont++;
             }
