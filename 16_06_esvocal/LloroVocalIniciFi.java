@@ -19,14 +19,14 @@ public class LloroVocalIniciFi {
                     System.out.println("Text?");
                     entrada = Entrada.readLine();
                     if (entrada.isBlank()) continue;
-                } 
-                
-            char primer = entrada.charAt(0);
-            char ultim = entrada.charAt(entrada.length() - 1);
-            if (UtilString.esVocal(primer, ultim)) {
-                System.out.println(cont + ": " + "\"" + entrada + "\"");
-                cont++;
+                    } 
                 }
+                
+                char primer = entrada.charAt(0);
+                char ultim = entrada.charAt(entrada.length() - 1);
+                if (UtilString.esVocal(primer) || UtilString.esVocal(ultim)) {
+                    System.out.println(cont + ": " + "\"" + entrada + "\"");
+                    cont++;
             }
         }
     }

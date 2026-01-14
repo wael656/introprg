@@ -1,9 +1,9 @@
 public class UtilString {
-    public static boolean esVocal(char primer, char ultim) {
-        String vocals = "aeiouàéèíòóú";
+    public static boolean esVocal(char caracter) {
+        String vocals = "aeiouàèéíïòóúü";
         for (int i = 0; i < vocals.length(); i++) {
             char v = vocals.charAt(i);
-            if (primer == v || ultim == v) {
+            if (caracter == v) {
                 return true;
             }
         }
