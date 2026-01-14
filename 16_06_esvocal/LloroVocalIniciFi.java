@@ -16,9 +16,7 @@ public class LloroVocalIniciFi {
                     System.out.println("Adéu");
                     return;
                 } else {
-                    System.out.println("Text?");
-                    entrada = Entrada.readLine();
-                    if (entrada.isBlank()) continue;
+                    continue;
                     } 
                 }
                 
