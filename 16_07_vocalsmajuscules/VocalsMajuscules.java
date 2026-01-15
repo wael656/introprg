@@ -15,7 +15,7 @@ public class VocalsMajuscules {
             if (UtilString.esVocal(c)) {
                resultat+=Character.toUpperCase(c);
             } else {
-                resultat+=Character.toLowerCase(c);
+                resultat+=c;
             }   
         }
         return resultat; 
