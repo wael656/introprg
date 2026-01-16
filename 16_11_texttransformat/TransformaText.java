@@ -22,6 +22,10 @@ public class TransformaText {
                 resultat+=c;
             }
             
+            if (text == "   ") {
+                resultat+=text;
+            } 
+            
             if (UtilString.esVocal(c)) {
                 resultat+=Character.toLowerCase(c);
             } 
