@@ -18,13 +18,9 @@ public class TransformaText {
         String resultat = "";
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (c == ' ') {
+            if (Character.isWhitespace(c)) {
                 resultat+=c;
             }
-            
-            if (text == "   ") {
-                resultat+=text;
-            } 
             
             if (UtilString.esVocal(c)) {
                 resultat+=Character.toLowerCase(c);
