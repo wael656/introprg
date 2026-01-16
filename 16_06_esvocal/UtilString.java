@@ -1,3 +1,4 @@
+/*Aquest programa UtilString revisa que els caracters dels texts introduïts siguin vocals catalanes.*/
 public class UtilString {
     public static boolean esVocal(char caracter) {
         String vocals = "aeiouàèéíïòóúü";
