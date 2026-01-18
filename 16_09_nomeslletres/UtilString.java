@@ -1,4 +1,4 @@
-/**/
+/*Aquest programa UtilString en la primera funció guarda només els caràcters, la resta la deixa fora, en la segona funció les separa i posa una coma després de cada caràcter menys el caràcter final.*/
 public class UtilString {
     public static String nomesLletres(String text) {
         String resultat = "";
