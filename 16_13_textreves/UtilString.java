@@ -8,9 +8,7 @@ public class UtilString {
         String resultat = "";
         for (int i = text.length()-1; i >= 0; i--) {
             char c = text.charAt(i);
-            if (!Character.isWhitespace(c)) {
-                resultat+=c;
-            }
+            resultat+=c;
         }
         cometeja(resultat);
         return resultat;
@@ -20,10 +18,12 @@ public class UtilString {
         String resultat = "";
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (i < text.length()-1) {
-                resultat+=(c+ ", ");
-            } else {
-                resultat+=c;
+            if (!Character.isWhitespace(c)) {
+                if (i < text.length()-1) {
+                    resultat+=(c+ ", ");
+                } else {
+                    resultat+=c;
+                }
             }
         }
         return resultat;
