@@ -22,7 +22,6 @@ public class Codifica {
             if (c == 'é') {
                 c = 'é';
                 resultat+=c;
-                i++;
             }
             if (index < 0) {
                 index = 0;
@@ -32,6 +31,7 @@ public class Codifica {
                     if (c > 'z') {
                         c = 'a';
                     }
+                    resultat+=c;
                 }
             } else if (Character.isLetter(c) && Character.isUpperCase(c)) {
                 for (int j = 0; j < index; j++) {
@@ -39,6 +39,7 @@ public class Codifica {
                     if (c > 'Z') {
                         c = 'A';
                     }
+                    resultat+=c;
                 }
                 
             } else if (Character.isDigit(c)) {
@@ -47,9 +48,11 @@ public class Codifica {
                     if (c > '9') {
                         c = '0';
                     }
+                    resultat+=c;
                 }
+            } else {
+                resultat+=c;
             } 
-            resultat+=c;
         }
         return resultat;        
     }
