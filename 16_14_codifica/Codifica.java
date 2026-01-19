@@ -25,7 +25,7 @@ public class Codifica {
             }
             if (index < 0) {
                 index = 0;
-            } else if (Character.isLetter(c) && Character.isLowerCase(c) && c != 'é') {
+            } else if (Character.isLetter(c) && Character.isLowerCase(c) || c != 'é') {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'z') {
