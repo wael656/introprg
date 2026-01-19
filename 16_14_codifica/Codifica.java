@@ -23,14 +23,14 @@ public class Codifica {
                 index = 0;
             }
             
-            if (c == 'z') {
+            if (c == 'z' && index > 0) {
                 c = 'a';                
                 c+=index;
                 if (index >= 1) {
                     c+=-1;
                 }
                 resultat+=c;
-            } else if (c == 'Z') {
+            } else if (c == 'Z' && index > 0) {
                 c = 'A';                
                 c+=index;
                 if (index >= 1) {
