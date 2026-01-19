@@ -21,34 +21,30 @@ public class Codifica {
             char c = text.charAt(i);
             if (index < 0) {
                 index = 0;
-            }
-            
-            if (c == 'z' && index > 0) {
-                c = 'a';                
-                c+=index;
-                if (index >= 1) {
-                    c+=-1;
-                }
-                resultat+=c;
-            } else if (c == 'Z' && index > 0) {
-                c = 'A';                
-                c+=index;
-                if (index >= 1) {
-                    c+=-1;
-                }
-                resultat+=c;
             } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
-                c+=index;
-                resultat+=c;
+                for (int j = 0; j < index; j++) {
+                    c++;
+                    if (c > 'z') {
+                        c = 'a';
+                    }
+                }
             } else if (Character.isLetter(c) && Character.isUpperCase(c)) {
-                c+=index;
-                resultat+=c;
+                for (int j = 0; j < index; j++) {
+                    c++;
+                    if (c > 'Z') {
+                        c = 'A';
+                    }
+                }
+                
             } else if (Character.isDigit(c)) {
-                c+=index;
-                resultat+=c;
-            } else {
-                resultat+=c;
-            }
+                for (int j = 0; j < index; j++) {
+                    c++;
+                    if (c > '9') {
+                        c = '0';
+                    }
+                }
+            } 
+            resultat+=c;
         }
         return resultat;        
     }
