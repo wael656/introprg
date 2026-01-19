@@ -19,6 +19,9 @@ public class Codifica {
         String resultat = "";
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
+            if (c == 'é') {
+                c = 'é';
+            }
             if (index < 0) {
                 index = 0;
             } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
