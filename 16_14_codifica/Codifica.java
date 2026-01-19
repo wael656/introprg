@@ -11,8 +11,7 @@ public class Codifica {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        System.out.println("Índex?");
-        int num = Integer.parseInt(Entrada.readLine());
+        int num = Integer.parseInt(args[0]);
         System.out.println(codifica(text, num));
     }
     
