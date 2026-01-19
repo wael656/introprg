@@ -19,23 +19,16 @@ public class Codifica {
         String resultat = "";
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (c == 'é') {
-                c = 'é';
-                resultat+=c;
-            } else if (c == '@') {
-                c = '@';
-                resultat+=c;
-            }
             if (index < 0) {
                 index = 0;
-            } else if (Character.isLetter(c) && Character.isLowerCase(c) || c != 'é' || c != '@') {
+            } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'z') {
                         c = 'a';
                     }
                 }
-            } else if (Character.isLetter(c) && Character.isUpperCase(c) || c != 'É' || c != '@') {
+            } else if (Character.isLetter(c) && Character.isUpperCase(c)) {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'Z') {
