@@ -8,7 +8,7 @@ public class UtilString {
         String resultat = "";
         for (int i = text.length()-1; i >= 0; i--) {
             char c = text.charAt(i);
-            if (Character.isLetter(c)) {
+            if (!Character.isWhitespace(c)) {
                 resultat+=c;
             }
         }
