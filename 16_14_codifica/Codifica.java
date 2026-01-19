@@ -22,17 +22,20 @@ public class Codifica {
             if (c == 'é') {
                 c = 'é';
                 resultat+=c;
+            } else if (c == '@') {
+                c = '@';
+                resultat+=c;
             }
             if (index < 0) {
                 index = 0;
-            } else if (Character.isLetter(c) && Character.isLowerCase(c) || c != 'é') {
+            } else if (Character.isLetter(c) && Character.isLowerCase(c) || c != 'é' || c != '@') {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'z') {
                         c = 'a';
                     }
                 }
-            } else if (Character.isLetter(c) && Character.isUpperCase(c)) {
+            } else if (Character.isLetter(c) && Character.isUpperCase(c) || c != 'É' || c != '@') {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'Z') {
