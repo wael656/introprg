@@ -21,14 +21,14 @@ public class Codifica {
             char c = text.charAt(i);
             if (index < 0) {
                 index = 0;
-            } else if (c >= 'a' || c <= 'z') {
+            } else if (c >= 'a' && c <= 'z') {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'z') {
                         c = 'a';
                     }
                 }
-            } else if (c >= 'A' || c <= 'Z') {
+            } else if (c >= 'A' && c <= 'Z') {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'Z') {
