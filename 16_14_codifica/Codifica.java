@@ -25,13 +25,12 @@ public class Codifica {
             }
             if (index < 0) {
                 index = 0;
-            } else if (Character.isLetter(c) && Character.isLowerCase(c)) {
+            } else if (Character.isLetter(c) && Character.isLowerCase(c) && c != 'é') {
                 for (int j = 0; j < index; j++) {
                     c++;
                     if (c > 'z') {
                         c = 'a';
                     }
-                    resultat+=c;
                 }
             } else if (Character.isLetter(c) && Character.isUpperCase(c)) {
                 for (int j = 0; j < index; j++) {
@@ -39,7 +38,6 @@ public class Codifica {
                     if (c > 'Z') {
                         c = 'A';
                     }
-                    resultat+=c;
                 }
                 
             } else if (Character.isDigit(c)) {
@@ -48,11 +46,9 @@ public class Codifica {
                     if (c > '9') {
                         c = '0';
                     }
-                    resultat+=c;
                 }
-            } else {
-                resultat+=c;
             } 
+            resultat+=c;
         }
         return resultat;        
     }
