@@ -21,6 +21,7 @@ public class Codifica {
             char c = text.charAt(i);
             if (c == 'é') {
                 c = 'é';
+                resultat+=c;
             }
             if (index < 0) {
                 index = 0;
