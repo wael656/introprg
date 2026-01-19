@@ -22,6 +22,7 @@ public class Codifica {
             if (c == 'é') {
                 c = 'é';
                 resultat+=c;
+                i++;
             }
             if (index < 0) {
                 index = 0;
