@@ -4,7 +4,7 @@ public class ForaEspaisSobrers {
         while (true) {
             System.out.println("El lloro espera un text");
             String text = Entrada.readLine();
-            if (text.isBlank()) {
+            if (text.isEmpty()) {
                 break;
             }
             System.out.println("El lloro respon: " + UtilString.normalitzaBlancs(text));            
