@@ -16,7 +16,7 @@ public class UtilString {
             c  = 'a';
         } else if (c == 'é' || c == 'è') {
             c = 'e';
-        } else if (c == 'í') {
+        } else if (c == 'í' || c == 'ï') {
             c = 'i';
         } else if (c == 'ó' || c =='ò') {
             c = 'o';
@@ -26,7 +26,7 @@ public class UtilString {
             c = 'A';
         } else if (c == 'É' || c == 'È') {
             c = 'E';
-        } else if (c == 'Í') {
+        } else if (c == 'Í' || c == 'Ï') {
             c = 'I';
         } else if (c == 'Ò' || c == 'Ó') {
             c = 'O';
