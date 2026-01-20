@@ -20,7 +20,7 @@ public class UtilString {
             c = 'i';
         } else if (c == 'ó' || c =='ò') {
             c = 'o';
-        } else if (c == 'ú') {
+        } else if (c == 'ú' || c == 'ü') {
             c = 'u';
         } else if (c == 'À') {
             c = 'A';
@@ -30,7 +30,7 @@ public class UtilString {
             c = 'I';
         } else if (c == 'Ò' || c == 'Ó') {
             c = 'O';
-        } else if (c == 'Ú') {
+        } else if (c == 'Ú' || c == 'ü') {
             c = 'U';
         } else if (c == 'ç') {
             c = 'c';
