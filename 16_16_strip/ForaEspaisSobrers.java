@@ -7,7 +7,7 @@ public class ForaEspaisSobrers {
             if (text.isEmpty()) {
                 break;
             }
-            System.out.println("El lloro respon: " + "\"" + UtilString.normalitzaBlancs(text) + "\"");            
+            System.out.println("El lloro respon " + "\"" + UtilString.normalitzaBlancs(text) + "\"");            
         }
         System.out.println("El lloro s'acomiada atentament");   
     }
