@@ -6,6 +6,7 @@ public class EsEnter {
         System.out.println("Introdueix els texts a analitzar:");
         while (true) {
             String text = Entrada.readLine();
+            text = text.trim();
             if (text.isBlank()) {
                 System.out.println("Adéu");
                 break;
