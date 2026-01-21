@@ -6,12 +6,12 @@ public class EsEnter {
         System.out.println("Introdueix els texts a analitzar:");
         while (true) {
             String text = Entrada.readLine();
-            text = text.strip();
+
             if (text.isBlank()) {
                 System.out.println("Adéu");
                 break;
             }
-            if (UtilString.esEnter(text)) {
+            if (UtilString.esEnter(text.strip())) {
                 System.out.println("\"" + text + "\"" + " és enter");
             } else {
                 System.out.println("\"" + text + "\"" +  " no és enter");
