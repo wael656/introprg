@@ -1,27 +1,37 @@
 /*Nosaltres desenvoluparem la funció normalitzaBlancs() que farà el mateix que String.strip() però afegirà la part de normalitzar els espais en blanc sobrers entre mig de les paraules del text. Així:*/
 public class UtilString {
     public static String normalitzaBlancs(String text) {
-        String resultat = ""; 
+        int inici = 0;
+        while (inici < text.length() && Character.isWhitespace(text.charAt(inici))) {
+            inici++;
+        }
+
+        if (inici == text.length()) {
+            return ""; 
+        }
+
+        int fi = text.length() - 1;
+        while (fi >= 0 && Character.isWhitespace(text.charAt(fi))) {
+            fi--;
+        }
+
+        String resultat = "";
         boolean espai = false;
-        for (int i = 0; i < text.length(); i++) {
+
+        for (int i = inici; i <= fi; i++) {
             char c = text.charAt(i);
-            if (text.charAt(0) == ' ') {
-                continue;
-            } else if (text.charAt(text.length()-1) == ' ') {
-                continue;
-            }
-            
+
             if (Character.isWhitespace(c)) {
                 if (!espai) {
-                    resultat+=" ";
+                    resultat += " ";
                     espai = true;
                 }
             } else {
-                resultat+=c;
+                resultat += c;
                 espai = false;
             }
-        
         }
+        
         return resultat;
     }
 }
