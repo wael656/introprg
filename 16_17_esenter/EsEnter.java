@@ -11,9 +11,9 @@ public class EsEnter {
                 break;
             }
             if (UtilString.esEnter(text)) {
-                System.out.println("\"" + text + "\"" + " Es enter");
+                System.out.println("\"" + text + "\"" + " és enter");
             } else {
-                System.out.println("\"" + text + "\"" +  " No es enter");
+                System.out.println("\"" + text + "\"" +  " no és enter");
             }
         }
     }
