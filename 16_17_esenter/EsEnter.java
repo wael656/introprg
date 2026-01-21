@@ -8,7 +8,7 @@ public class EsEnter {
             if (text.isBlank()) {
                 System.out.println("Adéu");
             }
-            if (UtilString.esEnter(text)) {
+            else if (UtilString.esEnter(text)) {
                 System.out.println("\"" + text + "\"" + " és enter");
             } else {
                 System.out.println("\"" + text + "\"" +  " no és enter");
