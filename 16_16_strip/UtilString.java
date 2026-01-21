@@ -2,10 +2,15 @@
 public class UtilString {
     public static String normalitzaBlancs(String text) {
         String resultat = ""; 
-        String nou = text.strip();
         boolean espai = false;
-        for (int i = 0; i < nou.length(); i++) {
-            char c = nou.charAt(i);
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (text.charAt(0) == ' ') {
+                continue;
+            } else if (text.charAt(text.length()-1) == ' ') {
+                continue;
+            }
+            
             if (Character.isWhitespace(c)) {
                 if (!espai) {
                     resultat+=" ";
