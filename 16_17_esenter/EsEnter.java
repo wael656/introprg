@@ -3,18 +3,15 @@
 El programa EsEnter farà pràcticament el mateix que l'antic Enters, amb les següents diferències:*/
 public class EsEnter {
     public static void main(String[] args) {
-        while (true) {
             System.out.println("Introdueix els texts a analitzar:");
             String text = Entrada.readLine();
             if (text.isBlank()) {
                 System.out.println("Adéu");
-                break;
             }
             if (UtilString.esEnter(text)) {
                 System.out.println("\"" + text + "\"" + " és enter");
             } else {
                 System.out.println("\"" + text + "\"" +  " no és enter");
             }
-        }
     }
 }
