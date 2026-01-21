@@ -11,7 +11,7 @@ public class EsEnter {
                 System.out.println("Adéu");
                 break;
             }
-            if (UtilString.esEnter(text.strip())) {
+            if (UtilString.esEnter(UtilString.normalitzaBlancs(text))) {
                 System.out.println("\"" + text + "\"" + " és enter");
             } else {
                 System.out.println("\"" + text + "\"" +  " no és enter");
