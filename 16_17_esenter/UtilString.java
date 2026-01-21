@@ -2,6 +2,11 @@
 public class UtilString {
     public static boolean esEnter(String text) {
         text = text.trim();
+        
+        if (text.isEmpty()) {
+            return false;
+        }
+        
         boolean esDigit = true;
             for (int i = 0; i < text.length(); i++) {
                 char n = text.charAt(i); 
