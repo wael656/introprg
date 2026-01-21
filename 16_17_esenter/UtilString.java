@@ -4,12 +4,15 @@ public class UtilString {
         boolean esDigit = true;
             for (int i = 0; i < text.length(); i++) {
                 char n = text.charAt(i); 
+                if (Character.isLetter(n)) {
+                    esDigit = false;
+                }
                 
                 if (!Character.isDigit(n) || n == ' ') {
                     esDigit = false;
                 } 
                 
-                if (text.charAt(0) == '-' || text.charAt(0) == '+') {
+                if (text.charAt(0) == '-' || text.charAt(0) == '+' && !Character.isLetter(text.charAt(1))) {
                     esDigit = true;                    
                 } 
                 
