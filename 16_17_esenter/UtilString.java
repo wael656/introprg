@@ -12,7 +12,7 @@ public class UtilString {
                     esDigit = false;
                 } 
                 
-                if (text.charAt(0) == '-' || text.charAt(0) == '+' && !Character.isLetter(text.charAt(1)) && !Character.isLetter(text.charAt(2)) && !Character.isLetter(text.charAt(3)) && !Character.isLetter(text.charAt(text.length()-1))) {
+                if (text.charAt(0) == '-'  && !Character.isLetter(text.charAt(1)) && !Character.isLetter(text.charAt(2)) && !Character.isLetter(text.charAt(3)) && !Character.isLetter(text.charAt(text.length()-1)) || text.charAt(0) == '+' && !Character.isLetter(text.charAt(1)) && !Character.isLetter(text.charAt(2)) && !Character.isLetter(text.charAt(3)) && !Character.isLetter(text.charAt(text.length()-1))) {
                     esDigit = true;                    
                 } 
                 
