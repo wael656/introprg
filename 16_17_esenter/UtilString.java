@@ -36,31 +36,23 @@ public class UtilString {
     }
     
     public static boolean esEnter(String text) {
-        
-        
-        if (text.isEmpty()) {
-            return false;
-        }
-        
-        boolean esDigit = true;
-            for (int i = 0; i < text.length(); i++) {
-                char n = text.charAt(i); 
-                
-                if (Character.isDigit(n)) {
+    if (text == null || text.isEmpty()) {
+        return false;
+    }
 
-                }
-                else if ((n == '+' || n == '-') && i == 0) {
-                    if (text.length() == 1) {
-                        esDigit = false;
-                    }
-                }
-                else {
-                    esDigit = false;
-                }
-                if (!esDigit) {
-                    break;
-                }
-            }
-                return esDigit;
+    for (int i = 0; i < text.length(); i++) {
+        char c = text.charAt(i);
+
+        if (Character.isDigit(c)) {
+            continue;
+        }
+
+        if ((c == '-' || c == '+') && i == 0 && text.length() > 1) {
+            continue; 
+        }
+
+        return false; 
+    }
+        return true;
     }    
 }
