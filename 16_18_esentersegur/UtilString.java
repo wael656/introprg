@@ -48,7 +48,7 @@ public class UtilString {
             }
             
             
-             else if ((c == '-' || c == '+') && i == 0 && text.length() > 1 && text.length() < 11) {
+             if ((c == '-' || c == '+') && i == 0 && text.length() > 1 && text.length() < 11) {
                 continue; 
             }
 
