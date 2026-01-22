@@ -47,6 +47,10 @@ public class UtilString {
                 continue;
             }
             
+            if (text.length() < 10) {
+                continue;
+            }
+            
             if ((c == '-' || c == '+') && i == 0 && text.length() > 1) {
                 continue; 
             }
