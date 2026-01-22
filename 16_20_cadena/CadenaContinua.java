@@ -10,15 +10,18 @@ public class CadenaContinua {
         } else {
             System.out.println("Nombre?");
             String numero = Entrada.readLine();
-            if (!Character.isDigit(text.charAt(0))) {
-                System.out.println("error");    
-            } else {
-                int num = Integer.parseInt(numero);
-                
-                if (num < 0) {
-                    System.out.println();
+            for (int i = 0; i < numero.length(); i++) {
+                if (!Character.isDigit(numero.charAt(i))) {
+                    System.out.println("error");  
+                    break;  
                 } else {
-                    System.out.println(UtilString.cadenaContinua(text, num)); 
+                    int num = Integer.parseInt(numero);
+                
+                    if (num < 0) {
+                        System.out.println();
+                    } else {
+                        System.out.println(UtilString.cadenaContinua(text, num)); 
+                    }
                 }
             } 
         }
