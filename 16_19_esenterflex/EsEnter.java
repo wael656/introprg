@@ -3,6 +3,11 @@
 El programa EsEnter farà pràcticament el mateix que l'antic Enters, amb les següents diferències:*/
 public class EsEnter {
     public static void main(String[] args) {
+        String modalitat = args[0];
+        if (!modalitat.equals("estricte") || !modalitat.equals("flexible")) {
+            System.out.println("Modalitat no reconeguda");
+            return;
+        }
         System.out.println("Introdueix els texts a analitzar:");
         while (true) {
             String text = Entrada.readLine();
