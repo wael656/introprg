@@ -42,14 +42,11 @@ public class UtilString {
 
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-
-            if (Character.isDigit(c)) {
+            
+            if (Character.isDigit(c) && text.length() < 10) {
                 continue;
             }
             
-            if (text.length() < 10) {
-                continue;
-            }
             
             if ((c == '-' || c == '+') && i == 0 && text.length() > 1) {
                 continue; 
