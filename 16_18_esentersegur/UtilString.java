@@ -39,16 +39,24 @@ public class UtilString {
         if (text == null || text.isEmpty()) {
             return false;
         }
-
+        String nou = "";
         for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
+            char c = text.charAt(i); 
+            if (c == '0') {
+                continue;
+            }
+            nou+=c;
+        }
+        
+        for (int i = 0; i < nou.length(); i++) {
+            char c = nou.charAt(i);
             
-            if (Character.isDigit(c) && text.length() < 10) {
+            if (Character.isDigit(c) && nou.length() < 10) {
                 continue;
             }
             
             
-             if ((c == '-' || c == '+') && i == 0 && text.length() > 1 && text.length() < 11) {
+             if ((c == '-' || c == '+') && i == 0 && nou.length() > 1 && nou.length() < 11) {
                 continue; 
             }
 
