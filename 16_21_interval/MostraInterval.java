@@ -27,13 +27,7 @@ public class MostraInterval {
             System.out.println("ERROR: " + "\"" + Sinici + "\"" + " no és un enter vàlid");
             return;
         }
-        if (inici < 0) {
-            inici = 0;
-        }
-        
-        if (inici > text.length()-1) {
-            inici = text.length() -1;
-        } 
+         
         System.out.println("final?");
         String Sfin = Entrada.readLine();
         if (UtilString.esEnter(Sfin)) {
@@ -42,12 +36,7 @@ public class MostraInterval {
             System.out.println("ERROR: " + "\"" +  Sfin + "\"" +  " no és un enter vàlid");
             return;
         }
-        if (fin > text.length()-1) {
-            fin = text.length() -1;
-        } 
-        if (fin < 0) {
-            fin = 0;
-        }
+        
         System.out.println(UtilString.intervalString(text,inici,fin));
     }
 }
