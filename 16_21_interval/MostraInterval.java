@@ -1,4 +1,14 @@
-/**/
+/*Recuperem l'exercici que mostrava la secció d'un String i fem-ne la versió modular
+
+El programa MostraInterval farà pràcticament el mateix que la versió original. Considera els canvis a partir d'aquesta nova interacció:
+
+Text?
+Java rocks
+inici?
+5
+final?
+7
+roc*/
 public class MostraInterval {
     public static void main(String[] args) {
         int inici = 0;
