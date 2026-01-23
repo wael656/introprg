@@ -4,6 +4,7 @@ public class MostraInterval {
         System.out.println("text?");
         String text = Entrada.readLine();
         if (text.isBlank()) {
+            System.out.println("ERROR, cadena buida");
             return;
         }
         System.out.println("inici?");
