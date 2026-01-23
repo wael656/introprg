@@ -1,6 +1,7 @@
 /**/
 public class MostraInterval {
     public static void main(String[] args) {
+        int inici = 0;
         System.out.println("text?");
         String text = Entrada.readLine();
         if (text.isBlank()) {
@@ -8,7 +9,10 @@ public class MostraInterval {
             return;
         }
         System.out.println("inici?");
-        int inici = Integer.parseInt(Entrada.readLine());
+        String Sinici = Entrada.readLine();
+        if (UtilString.esEnter(Sinici)) {
+            inici = Integer.parseInt(Sinici);
+        }
         if (inici < 0) {
             inici = 0;
         }
