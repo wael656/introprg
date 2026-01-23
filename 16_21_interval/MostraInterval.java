@@ -3,6 +3,9 @@ public class MostraInterval {
     public static void main(String[] args) {
         System.out.println("text?");
         String text = Entrada.readLine();
+        if (text.isBlank()) {
+            return;
+        }
         System.out.println("inici?");
         int inici = Integer.parseInt(Entrada.readLine());
         if (inici < 0) {
