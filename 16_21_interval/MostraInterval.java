@@ -30,6 +30,7 @@ public class MostraInterval {
             fin = Integer.parseInt(Sfin);
         } else {
             System.out.println("ERROR: " + "\"" +  Sfin + "\"" +  " no és un enter vàlid");
+            return;
         }
         if (fin > text.length()-1) {
             fin = text.length() -1;

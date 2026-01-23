@@ -1,4 +1,8 @@
-/**/
+/*És a dir, ara els caràcters resultants apareixen a la mateixa línia.
+
+L'operació de trobar els caràcters dins l'interval la realitzarà una funció anomenada intervalString() amb els paràmetres: la cadena de text corresponent, el valor inicial i el valor final. La funció retornarà la secció corresponent del text.
+
+intervalString() estarà definida dins de UtilString.java i serà una funció pura.*/
 public class UtilString {
     public static String intervalString(String text, int inici, int fin) {
         String resultat = "";
