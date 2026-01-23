@@ -13,6 +13,9 @@ public class MostraInterval {
         String Sinici = Entrada.readLine();
         if (UtilString.esEnter(Sinici)) {
             inici = Integer.parseInt(Sinici);
+        } else {
+            System.out.println("error");
+            return;
         }
         if (inici < 0) {
             inici = 0;
@@ -25,7 +28,7 @@ public class MostraInterval {
         String Sfin = Entrada.readLine();
         if (UtilString.esEnter(Sfin)) {
             fin = Integer.parseInt(Sfin);
-        }
+        } 
         if (fin > text.length()-1) {
             fin = text.length() -1;
         } 
