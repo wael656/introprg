@@ -2,6 +2,7 @@
 public class MostraInterval {
     public static void main(String[] args) {
         int inici = 0;
+        int fin = 0;
         System.out.println("text?");
         String text = Entrada.readLine();
         if (text.isBlank()) {
@@ -21,7 +22,10 @@ public class MostraInterval {
             inici = text.length() -1;
         } 
         System.out.println("final?");
-        int fin = Integer.parseInt(Entrada.readLine());
+        String Sfin = Entrada.readLine();
+        if (UtilString.esEnter(Sfin)) {
+            fin = Integer.parseInt(Sfin);
+        }
         if (fin > text.length()-1) {
             fin = text.length() -1;
         } 
