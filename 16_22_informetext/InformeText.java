@@ -3,8 +3,12 @@
 L'informe indicarà quants caràcters, lletres i vocals catalanes (majúscules i minúscules), dígits i altres caràcters conté. A banda, indicarà, per cada categoria, el percentatge respecte el total dels caràcters.*/
 public class InformeText {
     public static void main(String[] args) {
-        System.out.println("Text?");
+        System.out.println("Text?");        
         String text = Entrada.readLine();
+        if (text.isBlank()) {
+            System.out.println("Cadena buida");
+            return;
+        }
         System.out.println("Informe");
         System.out.println("=======");
         System.out.printf("lletres en majúscules: %d (%.2f%%)%n",
