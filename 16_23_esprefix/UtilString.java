@@ -15,6 +15,7 @@ public class UtilString {
             }
         } else {
             text = normalitzaBlancs(text);
+            text = normalitzaText(text);
             String resultat = "";
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
