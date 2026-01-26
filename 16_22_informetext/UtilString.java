@@ -14,10 +14,6 @@ int numLletresMinuscules(String)
 
 int numLletres(String): no totes les lletres són o bé majúscules o bé minúscules!*/
 public class UtilString {
-    public static void main(String[] args) {
-        System.out.println(numLletres("صباح الخير"));
-    }
-    
     public static boolean esVocal(char c) {
         String vocals = "aeiouàèéíïòóúü";
         for (int i = 0; i < vocals.length(); i++) {
@@ -102,11 +98,11 @@ public class UtilString {
         return NumLletresMajus;        
     }
     
-    public static int lletresRares(String text) {        
+    public static int lletresRares(String text) {                
         int lletres = 0;
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (c == 'お' || c == 'は' || c == 'よ' || c == 'う' || c == 'ご' || c == 'ざ' || c == 'い' || c == 'ま' || c == 'す' || c == 'ر' || c == 'ي' || c == 'خ' || c == 'ل' || c == 'ا' || c == 'ح' || c == 'ب' || c == 'ص' ) {
+            if (c == 'お' || c == 'は' || c == 'よ' || c == 'う' || c == 'ご' || c == 'ざ' || c == 'い' || c == 'ま' || c == 'す' || c == 'ر' || c == 'ي' || c == 'خ' || c == 'ل' || c == 'ا' || c == 'ح' || c == 'ب' || c == 'ص' || c == '早' || c == '上' || c == '好') {
             lletres++;
             } 
         }
