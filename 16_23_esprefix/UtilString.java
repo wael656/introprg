@@ -15,19 +15,9 @@ public class UtilString {
             }
         } else {
             text = normalitzaText(text);
-            String resultat = "";
-            for (int i = 0; i < text.length(); i++) {
-                char c = text.charAt(i);
-                resultat+=Character.toLowerCase(c);
-            }
-            
-            for (int i = 0; i < resultat.length(); i++) {
-                if (resultat.startsWith(prefix)) {
-                    return true;
-                }
-            }
+            prefix = normalitzaText(text);
         }
-        return false;
+        return text.startsWith(prefix);
     }
     
     public static boolean esPrefix(String prefix, String text) {
