@@ -15,7 +15,6 @@ public class UtilString {
             }
         } else {
             text = normalitzaText(text);
-            text = normalitzaBlancs(text);
             String resultat = "";
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
@@ -41,6 +40,7 @@ public class UtilString {
             char c = normalitzaChar(text.charAt(i));
             resultat+=c;
         } 
+        normalitzaBlancs(text);
         return resultat;
     }
     
