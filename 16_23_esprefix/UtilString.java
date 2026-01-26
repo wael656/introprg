@@ -15,7 +15,7 @@ public class UtilString {
             }
         } else {
             text = normalitzaText(text);
-            prefix = normalitzaText(prefix);
+            prefix = normalitzaText(text);
         }
         return text.startsWith(prefix);
     }
