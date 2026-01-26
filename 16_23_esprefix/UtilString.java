@@ -14,8 +14,8 @@ public class UtilString {
                 return true;    
             }
         } else {
-            text = normalitzaBlancs(text);
             text = normalitzaText(text);
+            text = normalitzaBlancs(text);
             String resultat = "";
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
