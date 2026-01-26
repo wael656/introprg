@@ -15,7 +15,7 @@ int numLletresMinuscules(String)
 int numLletres(String): no totes les lletres són o bé majúscules o bé minúscules!*/
 public class UtilString {
     public static boolean esVocal(char c) {
-        String vocals = "aEeIiOoUuÀàÈèÉéÍíÏïÒòÓóÚúÜü";
+        String vocals = "aeiouàèéíïòóúü";
         for (int i = 0; i < vocals.length(); i++) {
             char v = vocals.charAt(i);
             if (c == v) {
@@ -25,9 +25,17 @@ public class UtilString {
         return false;
     }
     
-    public static void main(String[] args) {
-        System.out.println(esVocal('A'));
+    public static boolean esVocalMajus(char c) {
+        String vocals = "AEIOUÀÈÉÍÏÒÓÚÜ";
+        for (int i = 0; i < vocals.length(); i++) {
+            char v = vocals.charAt(i);
+            if (c == v) {
+                return true;
+            }
+        }
+        return false;
     }
+    
     
     public static int numDigits(String text) {
         int digits = 0;
@@ -44,7 +52,7 @@ public class UtilString {
         int numVocalsMajus = 0;
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (esVocal(c)) {
+            if (esVocalMajus(c)) {
                 if (Character.isUpperCase(c)) {
                     numVocalsMajus++;
                 }
@@ -70,7 +78,7 @@ public class UtilString {
         int numVocals = 0;
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (esVocal(c)) {
+            if (esVocal(c) || esVocalMajus(c)) {
                     numVocals++;
             }
         }
