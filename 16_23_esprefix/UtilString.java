@@ -34,6 +34,44 @@ public class UtilString {
         return esPrefix(prefix, text, true);    
     }
     
+    public static String normalitzaText(String text) {
+        String resultat = "";
+        for (int i = 0; i < text.length(); i++) {
+            char c = normalitzaChar(text.charAt(i));
+            resultat+=c;
+        } 
+        return resultat;
+    }
+    
+    public static char normalitzaChar(char c) {
+        if (c == 'à') {
+            c  = 'a';
+        } else if (c == 'é' || c == 'è') {
+            c = 'e';
+        } else if (c == 'í' || c == 'ï') {
+            c = 'i';
+        } else if (c == 'ó' || c =='ò') {
+            c = 'o';
+        } else if (c == 'ú' || c == 'ü') {
+            c = 'u';
+        } else if (c == 'À') {
+            c = 'A';
+        } else if (c == 'É' || c == 'È') {
+            c = 'E';
+        } else if (c == 'Í' || c == 'Ï') {
+            c = 'I';
+        } else if (c == 'Ò' || c == 'Ó') {
+            c = 'O';
+        } else if (c == 'Ú' || c == 'Ü') {
+            c = 'U';
+        } else if (c == 'ç') {
+            c = 'c';
+        } else if (c == 'Ç') {
+            c = 'C';
+        }
+        return c;
+    }
+    
     public static String normalitzaBlancs(String text) {
         String resultat = "";
 
