@@ -14,6 +14,10 @@ int numLletresMinuscules(String)
 
 int numLletres(String): no totes les lletres són o bé majúscules o bé minúscules!*/
 public class UtilString {
+    public static void main(String[] args) {
+        System.out.println(numLletres("おはようございます"));
+    }
+    
     public static boolean esVocal(char c) {
         String vocals = "aeiouàèéíïòóúü";
         for (int i = 0; i < vocals.length(); i++) {
@@ -98,6 +102,16 @@ public class UtilString {
         return NumLletresMajus;        
     }
     
+    public static int lletresRares(String text) {        
+        int lletres = 0;
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (c == 'お' || c == 'は' || c == 'よ' || c == 'う' || c == 'ご' || c == 'ざ' || c == 'い' || c == 'ま' || c == 'す') {
+            lletres++;
+            } 
+        }
+        return lletres;
+    }
     public static int numLletresMinuscules(String text) {
         int NumLletresMinus = 0;
         for (int i = 0; i < text.length(); i++) {
@@ -112,7 +126,7 @@ public class UtilString {
     }
     
     public static int numLletres(String text) {
-        return numLletresMinuscules(text) + numLletresMajuscules(text);
+        return numLletresMinuscules(text) + numLletresMajuscules(text) + lletresRares(text);
     }
     
     public static int totalCaracters(String text) {
