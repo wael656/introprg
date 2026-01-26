@@ -14,7 +14,7 @@ public class UtilString {
                 return true;    
             }
         } else {
-            text = text.strip();
+            text = normalitzaBlancs(text);
             String resultat = "";
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
@@ -32,5 +32,19 @@ public class UtilString {
     
     public static boolean esPrefix(String prefix, String text) {
         return esPrefix(prefix, text, true);    
+    }
+    
+    public static String normalitzaBlancs(String text) {
+        String resultat = "";
+
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            if (!Character.isWhitespace(c)) {
+                resultat += c;
+            }
+        }
+        
+        return resultat;
     }
 }
