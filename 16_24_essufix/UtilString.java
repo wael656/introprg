@@ -11,20 +11,17 @@ Si has fet l'exercici anterior, és possible que hagis pensat, i què passa amb 
 
 Aquest exercici és la resposta: desenvolupa la funció esSufix() amb les següents signatures:*/
 public class UtilString {
-    public static boolean esSufix(String text, String sufix, boolean estricte) {
+    public static boolean esSufix(String sufix, String text, boolean estricte) {
         if (estricte) {
-            if (text.endsWith(sufix)) {
-                return true;
-            }
+            return text.endsWith(sufix);
         } else {
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(sufix);
             return tNorm.endsWith(sNorm);
         }
-        return false;
     }
     
-    public static boolean esSufix(String text, String sufix) {
+    public static boolean esSufix(String sufix, String text) {
         return esSufix(text, sufix, true);
     }
     
