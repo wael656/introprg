@@ -25,12 +25,12 @@ public class UtilString {
     }
     
     public static String normalitzaText(String text) {
-        String senseBlancs = normalitzaBlancs(text);
         String resultat = "";
         for (int i = 0; i < text.length(); i++) {
             char c = normalitzaChar(text.charAt(i));
             resultat+=c;
         } 
+        String senseBlancs = normalitzaBlancs(text);
         return resultat;
     }
     
