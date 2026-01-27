@@ -22,7 +22,7 @@ public class UtilString {
     }
     
     public static boolean esSufix(String sufix, String text) {
-        return esSufix(text, sufix, true);
+        return esSufix(sufix, text, true);
     }
     
     public static boolean esPrefix(String prefix, String text, boolean estricte) {
