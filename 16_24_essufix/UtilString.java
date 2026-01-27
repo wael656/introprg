@@ -25,7 +25,7 @@ public class UtilString {
         return esSufix(text, sufix, true);
     }
     
-    public static boolean esPrefix(String prefix, String text, boolean estricte) {
+   /* public static boolean esPrefix(String prefix, String text, boolean estricte) {
         if (estricte) {
             if (text.startsWith(prefix)) {
                 return true;    
@@ -40,7 +40,7 @@ public class UtilString {
     
     public static boolean esPrefix(String prefix, String text) {
         return esPrefix(prefix, text, true);    
-    }
+    }*/
     
     public static String normalitzaText(String text) {
         String senseBlancs = normalitzaBlancs(text);
