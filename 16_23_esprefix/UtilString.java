@@ -14,10 +14,11 @@ public class UtilString {
                 return true;    
             }
         } else {
-            text = normalitzaText(text);
-            prefix = normalitzaText(prefix);
+            String tNorm = normalitzaText(text);
+            String pNorm = normalitzaText(prefix);
+            return tNorm.startsWith(pNorm);
         }
-        return text.startsWith(prefix);
+        return false;
     }
     
     public static boolean esPrefix(String prefix, String text) {
@@ -25,12 +26,14 @@ public class UtilString {
     }
     
     public static String normalitzaText(String text) {
+        String senseBlancs = normalitzaBlancs(text);
         String resultat = "";
-        for (int i = 0; i < text.length(); i++) {
-            char c = normalitzaChar(text.charAt(i));
+        for (int i = 0; i < senseBlancs.length(); i++) {
+            char c = senseBlancs.charAt(i);
+            c = Character.toLowerCase(c);
+            c = normalitzaChar(c);
             resultat+=c;
         } 
-        String senseBlancs = normalitzaBlancs(text);
         return resultat;
     }
     
