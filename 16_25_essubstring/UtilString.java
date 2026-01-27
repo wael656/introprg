@@ -16,7 +16,7 @@ La funció String.contains() permet saber si un text està inclòs dins d'un alt
 
 De la mateixa manera que ja hem fet, per exemple, amb String.endsWith(), crearem una adaptació de contains() amb les següents signatures:*/
 public class UtilString {
-    public static boolean esSubstring(String text, String substring, boolean estricte) {
+    public static boolean esSubstring(String substring, String text, boolean estricte) {
         if (estricte) {
             return text.contains(substring);
         } else {
@@ -26,8 +26,8 @@ public class UtilString {
         }
     }
     
-    public static boolean esSubstring(String text, String substring) {
-        return esSubstring(text, substring, true); 
+    public static boolean esSubstring(String substring, String text) {
+        return esSubstring(substring, text, true); 
     }
     
     public static boolean esSufix(String sufix, String text, boolean estricte) {
