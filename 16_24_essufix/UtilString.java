@@ -13,19 +13,22 @@ Aquest exercici és la resposta: desenvolupa la funció esSufix() amb les següe
 public class UtilString {
     public static boolean esSufix(String text, String sufix, boolean estricte) {
         if (estricte) {
-            return text.endsWith(sufix);
+            if (text.endsWith(sufix)) {
+                return true;
+            }
         } else {
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(sufix);
             return tNorm.endsWith(sNorm);
         }
+        return false;
     }
     
     public static boolean esSufix(String text, String sufix) {
         return esSufix(text, sufix, true);
     }
     
-   /* public static boolean esPrefix(String prefix, String text, boolean estricte) {
+    public static boolean esPrefix(String prefix, String text, boolean estricte) {
         if (estricte) {
             if (text.startsWith(prefix)) {
                 return true;    
@@ -40,7 +43,7 @@ public class UtilString {
     
     public static boolean esPrefix(String prefix, String text) {
         return esPrefix(prefix, text, true);    
-    }*/
+    }
     
     public static String normalitzaText(String text) {
         String senseBlancs = normalitzaBlancs(text);
