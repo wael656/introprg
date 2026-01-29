@@ -12,12 +12,24 @@ Si has fet l'exercici anterior, és possible que hagis pensat, i què passa amb 
 Aquest exercici és la resposta: desenvolupa la funció esSufix() amb les següents signatures:*/
 public class UtilString {
     public static boolean esSufix(String sufix, String text, boolean estricte) {
+        int diferencia = text.length() - sufix.length();
         if (estricte) {
-            return text.endsWith(sufix);
-        } else {
+            for (int i = 0; i < sufix.length(); i++) {
+                if (sufix.charAt(i) != text.charAt(diferencia+i)) {
+                    return false;
+                }
+            }
+            return true;
+        } else { 
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(sufix);
-            return tNorm.endsWith(sNorm);
+            int dNorm = tNorm.length() - sNorm.length();
+            for (int i = 0; i < sNorm.length(); i++) {
+                if (sNorm.charAt(i) != tNorm.charAt(dNorm + i)) {
+                    return false;
+                }
+            }
+            return true;
         }
     }
     
