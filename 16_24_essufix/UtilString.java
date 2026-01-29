@@ -14,6 +14,9 @@ public class UtilString {
     public static boolean esSufix(String sufix, String text, boolean estricte) {
         int diferencia = text.length() - sufix.length();
         if (estricte) {
+            if (sufix.length() > text.length()) {
+                return false;
+            }
             for (int i = 0; i < sufix.length(); i++) {
                 if (sufix.charAt(i) != text.charAt(diferencia+i)) {
                     return false;
