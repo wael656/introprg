@@ -11,7 +11,7 @@ public class UtilString {
     public static boolean esPrefix(String prefix, String text, boolean estricte) {
         if (prefix.length() > text.length()) {
             return false;
-        }
+        } else {
         
         if (estricte) {
             for (int i = 0; i < prefix.length(); i++) {
@@ -33,6 +33,7 @@ public class UtilString {
                 }
             }
             return true;
+        }
         }
     }
     
