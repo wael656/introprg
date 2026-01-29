@@ -9,7 +9,12 @@ Per exemple el String "Mad" és prefix de "Madame Bovarie" però no ho serien "m
 Comparació laxa: Considerarà prefixos ignorant espais sobrers, majúscules/minúscules i caràcters especials de la nostra llengua.*/
 public class UtilString {
     public static boolean esPrefix(String prefix, String text, boolean estricte) {
+        
+        
         if (estricte) {
+            if (prefix.length() > text.length()) {
+               return false;
+        }
             for (int i = 0; i < prefix.length(); i++) {
                 char c1 = prefix.charAt(i);
                 char c2 = text.charAt(i);
