@@ -56,25 +56,75 @@ public class UtilString {
 
     public static boolean esSubstring(String substring, String text, boolean estricte) {
         if (estricte) {
-            return text.contains(substring);
+            if (substring.length() > text.length()) {
+                return false;
+            }
+            int limit = text.length() - substring.length();
+            
+            for (int i = 0; i <= limit; i++) {
+                boolean trobada = true;
+                for (int j = 0; j < substring.length(); j++) {
+                    if (substring.charAt(j) != text.charAt(i+j)) {
+                        trobada = false;
+                        break;
+                    }
+                }
+                
+                if (trobada) {
+                    return true;
+                }
+                
+            }
+            return false;
+            
         } else {
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(substring);
-            return tNorm.contains(sNorm);
+            int limit2 = tNorm.length() - sNorm.length();
+            
+            for (int i = 0; i <= limit2; i++) {
+                boolean trobada = true;
+                for (int j = 0; j < sNorm.length(); j++) {
+                    if (sNorm.charAt(j) != tNorm.charAt(i+j)) {
+                        trobada = false;
+                        break;
+                    }
+                }
+                
+                if (trobada) {
+                    return true;
+                }
+                
+            }
+            return false;
         }
-    }
     
     public static boolean esSubstring(String substring, String text) {
         return esSubstring(substring, text, true); 
     }
     
     public static boolean esSufix(String sufix, String text, boolean estricte) {
+        int diferencia = text.length() - sufix.length();
         if (estricte) {
-            return text.endsWith(sufix);
-        } else {
+            if (sufix.length() > text.length()) {
+                return false;
+            }
+            for (int i = 0; i < sufix.length(); i++) {
+                if (sufix.charAt(i) != text.charAt(diferencia+i)) {
+                    return false;
+                }
+            }
+            return true;
+        } else { 
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(sufix);
-            return tNorm.endsWith(sNorm);
+            int dNorm = tNorm.length() - sNorm.length();
+            for (int i = 0; i < sNorm.length(); i++) {
+                if (sNorm.charAt(i) != tNorm.charAt(dNorm + i)) {
+                    return false;
+                }
+            }
+            return true;
         }
     }
     
@@ -84,15 +134,29 @@ public class UtilString {
     
     public static boolean esPrefix(String prefix, String text, boolean estricte) {
         if (estricte) {
-            if (text.startsWith(prefix)) {
-                return true;    
+            if (prefix.length() > text.length()) {
+               return false;
+        }
+            for (int i = 0; i < prefix.length(); i++) {
+                char c1 = prefix.charAt(i);
+                char c2 = text.charAt(i);
+                if (c1 != c2) {
+                    return false;
+                }
             }
+            return true;    
         } else {
             String tNorm = normalitzaText(text);
             String pNorm = normalitzaText(prefix);
-            return tNorm.startsWith(pNorm);
+            for (int i = 0; i < pNorm.length(); i++) {
+                char c1 = tNorm.charAt(i);
+                char c2 = pNorm.charAt(i);
+                if (c1 != c2) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return false;
     }
     
     public static boolean esPrefix(String prefix, String text) {
