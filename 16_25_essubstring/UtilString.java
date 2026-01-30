@@ -21,15 +21,44 @@ public class UtilString {
             if (substring.length() > text.length()) {
                 return false;
             }
-            for (int i = 0; i < substring.length(); i++) {
-                char c1 = text.charAt(i);
-                char c2 = substring.charAt(i);
+            int limit = text.length() - substring.length();
+            
+            for (int i = 0; i <= limit; i++) {
+                boolean trobada = true;
+                for (int j = 0; j < substring.length(); j++) {
+                    if (substring.charAt(j) != text.charAt(i+j)) {
+                        trobada = false;
+                        break;
+                    }
+                }
+                
+                if (trobada) {
+                    return true;
+                }
                 
             }
+            return false;
+            
         } else {
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(substring);
-            return tNorm.contains(sNorm);
+            int limit2 = tNorm.length() - sNorm.length();
+            
+            for (int i = 0; i <= limit2; i++) {
+                boolean trobada = true;
+                for (int j = 0; j < sNorm.length(); j++) {
+                    if (sNorm.charAt(j) != tNorm.charAt(i+j)) {
+                        trobada = false;
+                        break;
+                    }
+                }
+                
+                if (trobada) {
+                    return true;
+                }
+                
+            }
+            return false;
         }
     }
     
