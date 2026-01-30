@@ -42,15 +42,29 @@ public class UtilString {
     
     public static boolean esPrefix(String prefix, String text, boolean estricte) {
         if (estricte) {
-            if (text.startsWith(prefix)) {
-                return true;    
+            if (prefix.length() > text.length()) {
+               return false;
+        }
+            for (int i = 0; i < prefix.length(); i++) {
+                char c1 = prefix.charAt(i);
+                char c2 = text.charAt(i);
+                if (c1 != c2) {
+                    return false;
+                }
             }
+            return true;    
         } else {
             String tNorm = normalitzaText(text);
             String pNorm = normalitzaText(prefix);
-            return tNorm.startsWith(pNorm);
+            for (int i = 0; i < pNorm.length(); i++) {
+                char c1 = tNorm.charAt(i);
+                char c2 = pNorm.charAt(i);
+                if (c1 != c2) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return false;
     }
     
     public static boolean esPrefix(String prefix, String text) {
