@@ -98,6 +98,7 @@ public class UtilString {
             }
             return false;
         }
+    }
     
     public static boolean esSubstring(String substring, String text) {
         return esSubstring(substring, text, true); 
