@@ -18,7 +18,14 @@ De la mateixa manera que ja hem fet, per exemple, amb String.endsWith(), crearem
 public class UtilString {
     public static boolean esSubstring(String substring, String text, boolean estricte) {
         if (estricte) {
-            return text.contains(substring);
+            if (substring.length() > text.length()) {
+                return false;
+            }
+            for (int i = 0; i < substring.length(); i++) {
+                char c1 = text.charAt(i);
+                char c2 = substring.charAt(i);
+                
+            }
         } else {
             String tNorm = normalitzaText(text);
             String sNorm = normalitzaText(substring);
