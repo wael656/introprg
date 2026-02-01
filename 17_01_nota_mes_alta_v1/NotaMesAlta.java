@@ -13,12 +13,19 @@ public class NotaMesAlta {
         while (true) {
             int num = Integer.parseInt(Entrada.readLine());
             if (num > 0 && num < 11) {
+                i++;
                 if (num > gran) {
                   gran = num;
                 }
             }   
-            if (num == -1) {
+            
+            if (num == -1 && i > 1) {
                 System.out.println("La nota més alta és " + gran);
+                break;
+            } 
+            
+            else if (num == -1 && i < 2) {
+                System.out.println("Com a mínim calen dues notes");
                 break;
             } 
         }
