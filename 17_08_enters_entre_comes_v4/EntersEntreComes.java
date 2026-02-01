@@ -18,6 +18,10 @@ public class EntersEntreComes {
         }
         
             int quants = Integer.parseInt(text);
+            if (quants < 1) {
+                System.out.println("Res a fer");
+                return;
+            }
             System.out.println("Separador?");
             String separador = Entrada.readLine();
             char separador2;
