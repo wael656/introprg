@@ -9,7 +9,7 @@ Finalment, mostrarà els valors llegits separats per comes.
 Podem seguir suposant que els valors d'entrada seran enters. A més, podem suposar que ens donaran tants enters com ens indiquin.*/
 public class EntersEntreComes {
     public static void main(String[] args) {
-        System.out.println("Quants valors?");
+        System.out.println("Quants?");
         int quants = Integer.parseInt(Entrada.readLine());
         int[] num = new int[quants];
         
