@@ -11,6 +11,10 @@ public class EntersEntreComes {
     public static void main(String[] args) {
         System.out.println("Quants?");
         int quants = Integer.parseInt(Entrada.readLine());
+        if (quants < 1) {
+            System.out.println("Error");
+            return;
+        }
         int[] num = new int[quants];
         
         for (int i = 0; i < num.length; i++) {
