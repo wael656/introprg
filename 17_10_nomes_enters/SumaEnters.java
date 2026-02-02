@@ -1,4 +1,4 @@
-/**/
+/*aquest programa anomenat sumaEnters te 3 moduls que agafa per la linia de comandes els enters, per fer l'operació de sumar o restar depenent de lo que li posis.*/
 public class SumaEnters {
     public static void main(String[] args) {
         if (args.length == 0) {
