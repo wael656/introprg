@@ -3,7 +3,7 @@
 Desenvolupa un programa anomenat ParaulesReves, que demani un text i el torni a mostrar però invertint l'ordre de les lletres dins de cada paraula. L'ordre de les paraules dins del text romandrà igual que a l'original.
 
 Considerarem que una paraula està formada per una seqüència de lletres i finalitza quan apareix un caràcter no lletra o bé la fi del text.*/
-public class ParaulaReves {
+public class ParaulesReves {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
