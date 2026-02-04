@@ -46,6 +46,8 @@ public class ParaulesReves {
                 } else {
                     resultat+=cMod;    
                 }
+            } else {
+                resultat += cText;
             }
         } 
         return resultat;
