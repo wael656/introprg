@@ -37,14 +37,15 @@ public class ParaulesReves {
         String resultat = "";
         for (int i = 0; i < text.length(); i++) {
             char cText = text.charAt(i);
+            
             if (i < model.length()) {
                 char cMod = model.charAt(i);
                 if (Character.isUpperCase(cMod)) {
-                    resultat+=Character.toUpperCase(cText);
+                    resultat += Character.toUpperCase(cText);
                 } else if (Character.isLowerCase(cMod)) {
-                    resultat+=Character.toLowerCase(cText);
+                    resultat += Character.toLowerCase(cText);
                 } else {
-                    resultat+=cMod;    
+                    resultat += cText;    
                 }
             } else {
                 resultat += cText;
