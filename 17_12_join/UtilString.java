@@ -12,13 +12,13 @@ public class UtilString {
     public static String junta(String[] cadenes, String separador, String darrerSeparador) {
         String resultat = "";
         for (int i = 0; i < cadenes.length; i++) {
+            resultat+=cadenes[i];
+            
             if (i == cadenes.length-1) {
                 resultat += (darrerSeparador + cadenes[cadenes.length-1]); 
             } else if (i == cadenes.length-2) {
                 resultat += (cadenes[i]);
-            } else {
-                resultat+=(cadenes[i] + separador);
-            }
+            } 
         }
         return resultat;
     }
