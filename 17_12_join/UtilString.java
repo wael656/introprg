@@ -24,7 +24,7 @@ public class UtilString {
     }
     
     public static String junta(String[] cadenes, String separador) {
-        return junta(cadenes, separador);
+        return junta(cadenes, separador, separador);
     }
 
 }
