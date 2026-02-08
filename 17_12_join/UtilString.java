@@ -17,7 +17,7 @@ public class UtilString {
             } else if (i == cadenes.length-2) {
                 resultat += (cadenes[i]);
             } else {
-                resultat+=cadenes[i] + ", ";
+                resultat+=cadenes[i] + separador + " ";
             }
         }
         return resultat;
