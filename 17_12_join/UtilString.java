@@ -13,11 +13,11 @@ public class UtilString {
         String resultat = "";
         for (int i = 0; i < cadenes.length; i++) {
             if (i == cadenes.length-1) {
-                resultat += (darrerSeparador + " " + cadenes[cadenes.length-1]); 
+                resultat += (darrerSeparador + cadenes[cadenes.length-1]); 
             } else if (i == cadenes.length-2) {
-                resultat += (cadenes[i] + " ");
+                resultat += (cadenes[i]);
             } else {
-                resultat+=(cadenes[i] + separador + " ");
+                resultat+=(cadenes[i] + separador);
             }
         }
         return resultat;
