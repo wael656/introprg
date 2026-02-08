@@ -17,7 +17,7 @@ public class UtilString {
             if (i == cadenes.length-1) {
                 resultat += (darrerSeparador + cadenes[cadenes.length-1]); 
             } else if (i == cadenes.length-2) {
-                resultat += (cadenes[i]);
+                resultat += (cadenes[cadenes.length-2]);
             } 
         }
         return resultat;
