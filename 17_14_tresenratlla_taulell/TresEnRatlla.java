@@ -51,8 +51,12 @@ public class TresEnRatlla {
                 } else {
                     System.out.println("Posició ocupada");
                 }
+            } else {
+                System.out.println("Coordenades incorrectes");
             }
-        }
+        } else {
+            System.out.println("Coordenades incorrectes");
+        }   
         
 
         // tornem a mostrar el tauler
