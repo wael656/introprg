@@ -50,7 +50,6 @@ public class TresEnRatlla {
                     tauler[fila][columna] = 'X';
                 } else {
                     System.out.println("Posició ocupada");
-                    return;
                 }
             }
         }
