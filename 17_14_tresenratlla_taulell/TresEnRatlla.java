@@ -48,6 +48,9 @@ public class TresEnRatlla {
             if (columna >= 0 && columna <= 2) {
                 if (tauler[fila][columna] == '·') {
                     tauler[fila][columna] = 'X';
+                } else {
+                    System.out.println("Posició ocupada");
+                    return;
                 }
             }
         }
