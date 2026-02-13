@@ -125,7 +125,7 @@ public class TresEnRatlla {
             } 
 
             // passa torn a l'altre jugador
-                if (torn == 'X' && !casellaOcupada(tauler, fila, col)) {
+                if (torn == 'X') {
                     torn = 'O';
                 } else {
                     torn = 'X';
