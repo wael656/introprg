@@ -94,6 +94,7 @@ public class TresEnRatlla {
 
             // comprova abandonament
             if (entrada.equals("a") || entrada.equals("A")) {
+                System.out.println(torn + " abandona");
                 return;
             }
 
