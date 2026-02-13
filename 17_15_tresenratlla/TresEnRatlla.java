@@ -101,7 +101,11 @@ public class TresEnRatlla {
                 // obté coordenades del moviment            
                 if (entrada.length() == 2 && Character.isDigit(entrada.charAt(0)) && Character.isDigit(entrada.charAt(1))) {
                     int fila = entrada.charAt(0) - '0';
-                    int col = entrada.charAt(1) - '0';
+                    int col = entrada.charAt(1) - '0';  
+                    
+                    if (fila >= 0 && col < 0 || fila >= 0 && col > 2 || fila > 2 && col >= 0 || fila < 0 && col <= 2) {
+                        
+                    }
                     
                     
 
