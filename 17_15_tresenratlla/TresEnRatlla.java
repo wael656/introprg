@@ -103,15 +103,17 @@ public class TresEnRatlla {
                     int fila = entrada.charAt(0) - '0';
                     int col = entrada.charAt(1) - '0';  
                     
-                    if (fila >= 0 && col < 0 || fila >= 0 && col > 2 || fila > 2 && col >= 0 || fila < 0 && col <= 2) {
-                        
+                    if (fila < 0 || fila > 2 || col < 0 || col > 2) {
+                        System.out.println("Coordenades no vàlides");
                     }
                     
+                    else if (casellaOcupada(tauler, fila, col)) {
+                        System.out.println("Casella ocupada");
+                    }
                     
-
-                // comprova si la casella està ocupada
-                    if (!casellaOcupada(tauler, fila, col)) {
+                    else {
                         tauler[fila][col] = torn;
+                    }
                         
 
                 // comprova jugador guanya
@@ -133,9 +135,6 @@ public class TresEnRatlla {
                     } else {
                         torn = 'X';
                     }
-                } else {
-                    System.out.println("Casella ocupada");
-                }
             } else {
                 System.out.println("Coordenades no vàlides");
             }
