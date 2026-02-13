@@ -59,82 +59,71 @@ public class TresEnRatlla {
         }
 
         public static void main(String[] args) {
-            // declara i inicialitza el tauler
-            char[][] tauler = new char[3][3];
-            
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                    tauler[i][j] = '·';
-                }
+        // Declara i inicialitza el tauler
+        char[][] tauler = new char[3][3];
+        
+        // Inicialització neta (borra los bloques repetidos que tenías)
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                tauler[i][j] = '·';
             }
-            tauler[0][0] = '·';
-            tauler[0][1] = '·';
-            tauler[0][2] = '·';
+        }
 
-            tauler[1][0] = '·';
-            tauler[1][1] = '·';
-            tauler[1][2] = '·';
-            
-            
-            tauler[2][0] = '·';
-            tauler[2][1] = '·';
-            tauler[2][2] = '·';
+        System.out.println("Comença el joc");
+        char torn = 'X';
 
-            System.out.println("Comença el joc");
+        while (true) {
+            mostraTaulell(tauler);
 
-            // indica quin és el jugador que té el torn
-            char torn = 'X';
+            System.out.println(torn + "?");
+            String entrada = Entrada.readLine();
 
-            while (true) {
-                mostraTaulell(tauler);
+            // 1. Abandonament
+            if (entrada.equalsIgnoreCase("a")) {
+                System.out.println(torn + " abandona");
+                return;
+            }
 
-                // obté el moviment del jugador actual
-                System.out.println(torn + "?");
-                String entrada = Entrada.readLine();
-
-                // comprova abandonament
-                if (entrada.equals("a") || entrada.equals("A")) {
-                    System.out.println(torn + " abandona");
-                    return;
-                }
-
-                // obté coordenades del moviment            
-                if (entrada.length() == 2 && Character.isDigit(entrada.charAt(0)) && Character.isDigit(entrada.charAt(1))) {
-                    int fila = entrada.charAt(0) - '0';
-                    int col = entrada.charAt(1) - '0';  
-                    
-                    if (fila < 0 || fila > 2 || col < 0 || col > 2) {
-                        System.out.println("Coordenades no vàlides");
-                    }
-                    
-                    else if (casellaOcupada(tauler, fila, col)) {
-                        System.out.println("Casella ocupada");
-                    }
-                    
-                    else {
-                        tauler[fila][col] = torn;
-                    }
-                        
-
-                // comprova jugador guanya
-                if (jugadorGuanya(tauler, torn)) {
-                    mostraTaulell(tauler);
-                    System.out.println(torn + " guanya");
-                    return;
-                }
-
-                // comprova empat
-                if (hiHaEmpat(tauler)) {
-                    System.out.println("Empat");
-                    return;
+            // 2. Validació de format (dos dígits)
+            if (entrada.length() == 2 && 
+                Character.isDigit(entrada.charAt(0)) && 
+                Character.isDigit(entrada.charAt(1))) {
+                
+                int fila = entrada.charAt(0) - '0';
+                int col = entrada.charAt(1) - '0';
+                
+                // 3. Validació de rang (0-2)
+                if (fila < 0 || fila > 2 || col < 0 || col > 2) {
+                    System.out.println("Coordenades no vàlides");
                 } 
+                // 4. Validació d'ocupació
+                else if (casellaOcupada(tauler, fila, col)) {
+                    System.out.println("Casella ocupada");
+                } 
+                else {
+                    tauler[fila][col] = torn;
 
-                // passa torn a l'altre jugador
+                    
+                    if (jugadorGuanya(tauler, torn)) {
+                        mostraTaulell(tauler);
+                        System.out.println(torn + " guanya");
+                        return;
+                    }
+
+                    if (hiHaEmpat(tauler)) {
+                        mostraTaulell(tauler);
+                        System.out.println("Empat");
+                        return;
+                    }
+
+                    // Canvi de torn (només si hem mogut fitxa)
                     if (torn == 'X') {
                         torn = 'O';
                     } else {
                         torn = 'X';
                     }
+                } 
+
             } else {
                 System.out.println("Coordenades no vàlides");
             }
