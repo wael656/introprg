@@ -114,7 +114,7 @@ public class TresEnRatlla {
 
             // comprova jugador guanya
             if (jugadorGuanya(tauler, torn)) {
-                System.out.println("Ha guanyat " + torn);
+                System.out.println(torn + "OO");
                 return;
             }
 
