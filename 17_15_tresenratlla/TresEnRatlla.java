@@ -83,6 +83,8 @@ public class TresEnRatlla {
         System.out.println("Comença el joc");
 
         // indica quin és el jugador que té el torn
+        int fila = 0;
+        int col = 0;
         char torn = 'X';
 
         while (true) {
@@ -100,18 +102,15 @@ public class TresEnRatlla {
 
             // obté coordenades del moviment            
             if (entrada.length() == 2 && Character.isDigit(entrada.charAt(0)) && Character.isDigit(entrada.charAt(1))) {
-                int fila = entrada.charAt(0) - '0';
-                int col = entrada.charAt(1) - '0';
+                fila = entrada.charAt(0) - '0';
+                col = entrada.charAt(1) - '0';
                 
                 
 
             // comprova si la casella està ocupada
                 if (!casellaOcupada(tauler, fila, col)) {
                     tauler[fila][col] = torn;
-                } else {
-                    System.out.println("Casella ocupada");
-                }
-            }
+                    
 
             // comprova jugador guanya
             if (jugadorGuanya(tauler, torn)) {
@@ -126,11 +125,15 @@ public class TresEnRatlla {
             } 
 
             // passa torn a l'altre jugador
-            if (torn == 'X') {
-                torn = 'O';
+                if (torn == 'X' && !casellaOcupada(tauler, fila, col)) {
+                    torn = 'O';
+                } else {
+                    torn = 'X';
+                }
             } else {
-                torn = 'X';
+                System.out.println("Casella ocupada");
             }
         }
     }
+}
 }
