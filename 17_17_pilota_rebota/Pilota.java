@@ -1,4 +1,4 @@
-/**/
+/*En aquest programa desde la terminal farme que una pilota estigui en un camp de 9 files i 13 columnes i cada vegada que prenem ENTER avançi una fila i una columna, peró aquesta vegada cada vegada que arribi al limit de files o columnes faci un rebot perque seguiexi el recorregut.*/
 public class Pilota {
     public static final int N_FILES = 9;
     public static final int N_COLS = 14;
