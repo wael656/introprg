@@ -1,34 +1,32 @@
 public class prova {
     public static void main(String[] args) {
-        int max = 0;
-        String textMax = "";
-        while (true) {
-            String entrada = Entrada.readLine();
-            int compta = comptaVocalNum(entrada);
-            if (max < compta) {
-                max = compta;
-                textMax = entrada;
-            } 
-            if (entrada.isBlank()) {
-                System.out.println("El text guanyador: " + textMax + " amb: " + max);
-                break;
-            }
-        }   
+        String[] fruites = {"Poma", "Plàtan", "Kiwi"};
+        int[][] vendes = {
+                {5, 2, 3},
+                {1, 4, 7},
+                {4, 23, 23}};
+        mostrar(vendes);
+        totalVendes(vendes);
     }
     
-    public static int comptaVocalNum(String text) {
-        int cont = 0;
-        String vocals = "AÀÁÄEÈÉËIÌÍÏOÒÓÖUÙÚÜ";
-        for (int i = 0; i < text.length(); i++) {
-            if (Character.isDigit(text.charAt(i))) {
-                    cont++;
-                }
-            for (int j = 0; j < vocals.length(); j++) {
-                if (text.charAt(i) == vocals.charAt(j)) {
-                    cont++;
-                }
+    public static void mostrar(int[][] vendes) {
+        for (int i = 0; i < vendes.length; i++) {
+            System.out.print("Dia" + (i+1) + " ");
+            for (int j = 0; j < vendes[i].length; j++) {
+                System.out.print(vendes[i][j] + " ");
+            
             }
+            System.out.println();
         }
-        return cont;
+    }
+    
+    public static void totalVendes(int[][] vendes) {
+        int[] total = new int[3];
+        for (int i = 0; i < vendes.length; i++) {
+            for (int j = 0; j < vendes[i].length; j++) {
+                total[i] += vendes[i][j];
+            }
+            System.out.println(total[i]);
+        }
     }
 }
