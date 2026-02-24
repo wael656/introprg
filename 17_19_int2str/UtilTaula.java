@@ -32,6 +32,7 @@ public class UtilTaula {
             for (int j = 0; j < taula[i].length; j++) {
                 taulell += String.format("%8d", taula[i][j]);
             }
+            taulell += "\n";
         }
         return taulell;
     }
