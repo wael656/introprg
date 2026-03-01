@@ -1,4 +1,6 @@
-/*…*/
+/*En aquest exercici, completaràs un programa que permet mostrar taules de diferents dimensions, amb totes les posicions inicialitzades amb un 1.
+
+Les dimensions vindran especificades en forma d'arguments de la línia de comandes. Una especificació de dimensió estarà formada per dos números, entre el 1 i el 99, separats pel caràcter x. Com a exemples vàlids d'especificacions de dimensions tindríem "2x4", "3x42" i "99x1" Qualsevol altra presentació d'una especificació es considerarà errònia.*/
 public class TaulaEnterAString {
     public static void main(String[] args){
         for (int i=0; i<args.length; i++) {
