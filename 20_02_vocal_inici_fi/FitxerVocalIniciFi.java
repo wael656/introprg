@@ -1,4 +1,8 @@
-/**/
+/*Recordes l'exercici en el que el lloro anava demanant texts i només repetia els que començaven o acabaven en vocal?
+
+Desenvoluparem un programa anomenat FitxerVocalIniciFi que farà servir una estructura molt similar, per mostrar totes les línies d'un fitxer de text anomenat frases.txt que comencin o acabin en vocal catalana.
+
+Per descomptat, caldrà que facis servir la funció esVocal() que vas utilitzar per la versió de referència.*/
 import java.io.*;
 
 public class FitxerVocalIniciFi {
