@@ -194,7 +194,7 @@ public class UtilString {
     }
     
     public static boolean esVocal(char c) {
-        String vocals = "aeiouàèéíïòóúü";
+        String vocals = "aeiouàèéíïòóúüAEIOUÀÈÉÍÏÒÓÚÜ";
         for (int i = 0; i < vocals.length(); i++) {
             char v = vocals.charAt(i);
             if (c == v) {

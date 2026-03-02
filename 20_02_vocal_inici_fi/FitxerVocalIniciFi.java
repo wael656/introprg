@@ -12,7 +12,7 @@ public class FitxerVocalIniciFi {
                 char inici = linia.charAt(0);
                 char fin = linia.charAt(linia.length()-1);
             
-                if (UtilString.esVocal(inici) || UtilString.esVocal(fin) || UtilString.esVocalMajus(inici) || UtilString.esVocalMajus(fin)) {
+                if (UtilString.esVocal(inici) || UtilString.esVocal(fin)) {
                     System.out.println(linia);
                 }
          
