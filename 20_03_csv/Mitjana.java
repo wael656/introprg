@@ -1,8 +1,14 @@
+/*Els fitxers de text poden presentar diferents formats. Un de molt típic és el conegut com a csv que són les sigles de Comma Separated Values o en el nostre idioma Valors Separats per Comes.
+
+Un fitxer csv, en la seva forma més bàsica, és una seqüència de línies de text on cada línia presenta un o més valors separats per un caràcter especial, habitualment la coma ,.
+
+És un format molt típic perquè representa molt eficientment dades en forma tabular com les que s'emmagatzemen a una taula d'una base de dades relacional, o a un full de càlcul.
+
+Sovint la primera línia es considera les capçaleres; és a dir, el nom de cada columna.*/
 import java.io.*;
 
 public class Mitjana {
     public static void main(String[] args) throws IOException {
-        // 1. Obtenir el nombre d'exàmens (6 per defecte) sense excepcions
         int numExamens = 6;
         if (args.length > 0) {
             String arg = args[0].trim();
@@ -19,13 +25,10 @@ public class Mitjana {
             }
         }
 
-        // --- SOLUCIÓ AL TEST 19 ---
-        // Si demanen menys de 2 exàmens, mostrem l'error i aturem el programa
         if (numExamens < 2) {
             System.out.println("Com a mínim 2 exàmens.");
             return;
         }
-        // --------------------------
 
         System.out.printf("Càlcul de la mitjana de notes per %d exàmens%n", numExamens);
 
@@ -34,7 +37,7 @@ public class Mitjana {
         if (!fitxer.exists()) return;
 
         BufferedReader input = new BufferedReader(new FileReader(fitxer));
-        input.readLine(); // Saltem la primera línia (capçaleres)
+        input.readLine(); 
 
         String linia;
         boolean hiHaNotes = false; 
@@ -42,7 +45,6 @@ public class Mitjana {
         while ((linia = input.readLine()) != null) {
             String[] parts = linia.split(",");
             
-            // Validar nom de l'alumne
             if (parts.length == 0) continue;
             String nom = parts[0].trim();
             if (nom.isEmpty()) continue;
@@ -50,12 +52,10 @@ public class Mitjana {
             hiHaNotes = true; 
             double suma = 0;
 
-            // Recorrem fins al nombre d'exàmens definit
             for (int i = 1; i <= numExamens; i++) {
                 if (i < parts.length) {
                     String valor = parts[i].trim();
                     
-                    // Comprovem MANUALMENT si és un número
                     boolean esNumero = true;
                     if (valor.isEmpty()) {
                         esNumero = false;
@@ -68,18 +68,15 @@ public class Mitjana {
                         }
                     }
 
-                    // Només sumem si és purament numèric
                     if (esNumero) {
                         suma += Integer.parseInt(valor);
                     }
                 }
             }
 
-            // Imprimim el resultat amb dos decimals
             System.out.printf("%s (%.2f)%n", nom, suma / numExamens);
         }
 
-        // Si no hem processat cap nota (Test 04)
         if (!hiHaNotes) {
             System.out.println("El fitxer notes.csv no conté cap nota.");
         }
