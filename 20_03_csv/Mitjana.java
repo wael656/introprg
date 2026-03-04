@@ -1,10 +1,3 @@
-/*Els fitxers de text poden presentar diferents formats. Un de molt típic és el conegut com a csv que són les sigles de Comma Separated Values o en el nostre idioma Valors Separats per Comes.
-
-Un fitxer csv, en la seva forma més bàsica, és una seqüència de línies de text on cada línia presenta un o més valors separats per un caràcter especial, habitualment la coma ,.
-
-És un format molt típic perquè representa molt eficientment dades en forma tabular com les que s'emmagatzemen a una taula d'una base de dades relacional, o a un full de càlcul.
-
-Sovint la primera línia es considera les capçaleres; és a dir, el nom de cada columna.*/
 import java.io.*;
 
 public class Mitjana {
@@ -26,6 +19,14 @@ public class Mitjana {
             }
         }
 
+        // --- SOLUCIÓ AL TEST 19 ---
+        // Si demanen menys de 2 exàmens, mostrem l'error i aturem el programa
+        if (numExamens < 2) {
+            System.out.println("Com a mínim 2 exàmens.");
+            return;
+        }
+        // --------------------------
+
         System.out.printf("Càlcul de la mitjana de notes per %d exàmens%n", numExamens);
 
         String cami = "notes.csv";
@@ -36,7 +37,7 @@ public class Mitjana {
         input.readLine(); // Saltem la primera línia (capçaleres)
 
         String linia;
-        boolean hiHaNotes = false; // Bandera per al Test 04
+        boolean hiHaNotes = false; 
 
         while ((linia = input.readLine()) != null) {
             String[] parts = linia.split(",");
@@ -46,7 +47,7 @@ public class Mitjana {
             String nom = parts[0].trim();
             if (nom.isEmpty()) continue;
 
-            hiHaNotes = true; // Hem trobat un alumne vàlid
+            hiHaNotes = true; 
             double suma = 0;
 
             // Recorrem fins al nombre d'exàmens definit
@@ -54,13 +55,12 @@ public class Mitjana {
                 if (i < parts.length) {
                     String valor = parts[i].trim();
                     
-                    // 2. Comprovem MANUALMENT si és un número (sense try-catch)
+                    // Comprovem MANUALMENT si és un número
                     boolean esNumero = true;
                     if (valor.isEmpty()) {
                         esNumero = false;
                     } else {
                         for (int j = 0; j < valor.length(); j++) {
-                            // Si troba qualsevol cosa que no sigui un dígit (0-9), no és número
                             if (!Character.isDigit(valor.charAt(j))) {
                                 esNumero = false;
                                 break;
@@ -68,7 +68,7 @@ public class Mitjana {
                         }
                     }
 
-                    // 3. Només sumem si estem 100% segurs que és purament numèric
+                    // Només sumem si és purament numèric
                     if (esNumero) {
                         suma += Integer.parseInt(valor);
                     }
@@ -79,7 +79,7 @@ public class Mitjana {
             System.out.printf("%s (%.2f)%n", nom, suma / numExamens);
         }
 
-        // Si no hem processat cap nota, imprimim l'avís (Test 04)
+        // Si no hem processat cap nota (Test 04)
         if (!hiHaNotes) {
             System.out.println("El fitxer notes.csv no conté cap nota.");
         }
