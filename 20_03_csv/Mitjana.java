@@ -9,7 +9,7 @@ import java.io.*;
 
 public class Mitjana {
     public static void main(String[] args) throws IOException {
-        System.out.println("Mitjana de notes dels 6 exàmens:");
+        System.out.println("Càlcul de la mitjana de notes per 6 exàmens");
         String cami = "notes.csv";
         FileReader fr = new FileReader(cami);
         BufferedReader input = new BufferedReader(fr);
