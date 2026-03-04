@@ -9,47 +9,81 @@ import java.io.*;
 
 public class Mitjana {
     public static void main(String[] args) throws IOException {
-        int n = 6;
-        if (args.length > 0 && esNumeric(args[0])) {
-            n = Integer.parseInt(args[0]);
+        // 1. Obtenir el nombre d'exàmens (6 per defecte) sense excepcions
+        int numExamens = 6;
+        if (args.length > 0) {
+            String arg = args[0].trim();
+            boolean esNumArg = true;
+            if (arg.isEmpty()) esNumArg = false;
+            for (int j = 0; j < arg.length(); j++) {
+                if (!Character.isDigit(arg.charAt(j))) {
+                    esNumArg = false;
+                    break;
+                }
+            }
+            if (esNumArg) {
+                numExamens = Integer.parseInt(arg);
+            }
         }
-        
-        System.out.println("Càlcul de la mitjana de notes per 6 exàmens");
+
+        System.out.printf("Càlcul de la mitjana de notes per %d exàmens%n", numExamens);
+
         String cami = "notes.csv";
-        FileReader fr = new FileReader(cami);
-        BufferedReader input = new BufferedReader(fr);
-        String linia = input.readLine();
-        
-        int contAlumnes = 0;
-        
+        File fitxer = new File(cami);
+        if (!fitxer.exists()) return;
+
+        BufferedReader input = new BufferedReader(new FileReader(fitxer));
+        input.readLine(); // Saltem la primera línia (capçaleres)
+
+        String linia;
+        boolean hiHaNotes = false; // Bandera per al Test 04
+
         while ((linia = input.readLine()) != null) {
             String[] parts = linia.split(",");
-            String nom = parts[0].trim();
-            if (nom.length() == 0) continue;
-            contAlumnes++;
             
-            double sumaAlumne = 0;
-            for (int i = 1; i <= n; i++) {
+            // Validar nom de l'alumne
+            if (parts.length == 0) continue;
+            String nom = parts[0].trim();
+            if (nom.isEmpty()) continue;
+
+            hiHaNotes = true; // Hem trobat un alumne vàlid
+            double suma = 0;
+
+            // Recorrem fins al nombre d'exàmens definit
+            for (int i = 1; i <= numExamens; i++) {
                 if (i < parts.length) {
-                    String notaText = parts[i].trim();
-                    if (esNumeric(notaText)) {
-                        sumaAlumne+=Integer.parseInt(notaText);
+                    String valor = parts[i].trim();
+                    
+                    // 2. Comprovem MANUALMENT si és un número (sense try-catch)
+                    boolean esNumero = true;
+                    if (valor.isEmpty()) {
+                        esNumero = false;
+                    } else {
+                        for (int j = 0; j < valor.length(); j++) {
+                            // Si troba qualsevol cosa que no sigui un dígit (0-9), no és número
+                            if (!Character.isDigit(valor.charAt(j))) {
+                                esNumero = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    // 3. Només sumem si estem 100% segurs que és purament numèric
+                    if (esNumero) {
+                        suma += Integer.parseInt(valor);
                     }
                 }
             }
-            System.out.printf("%s (%.2f)%n", nom, sumaAlumne/n);
-            if (contAlumnes == 0) {
-                System.out.println("El fitxer notes.csv no conté cap nota.");
-            }           
+
+            // Imprimim el resultat amb dos decimals
+            System.out.printf("%s (%.2f)%n", nom, suma / numExamens);
         }
+
+        // Si no hem processat cap nota, imprimim l'avís (Test 04)
+        if (!hiHaNotes) {
+            System.out.println("El fitxer notes.csv no conté cap nota.");
+        }
+
         input.close();
-    }
-    
-    public static boolean esNumeric(String text) {
-        if (text == null || text.length() == 0) return false;
-        for (int i = 0; i < text.length(); i++) {
-            if (Character.isDigit(text.charAt(i))) return false;
-        }
-        return true;
     }
 }
