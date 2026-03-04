@@ -9,23 +9,47 @@ import java.io.*;
 
 public class Mitjana {
     public static void main(String[] args) throws IOException {
+        int n = 6;
+        if (args.length > 0 && esNumeric(args[0])) {
+            n = Integer.parseInt(args[0]);
+        }
+        
         System.out.println("Càlcul de la mitjana de notes per 6 exàmens");
         String cami = "notes.csv";
         FileReader fr = new FileReader(cami);
         BufferedReader input = new BufferedReader(fr);
-        int suma = 0;
         String linia = input.readLine();
+        
+        int contAlumnes = 0;
         
         while ((linia = input.readLine()) != null) {
             String[] parts = linia.split(",");
-            for (int i = 1; i < parts.length; i++) {
-                if (parts[i].trim().equals("NP")) continue;
-                suma+=Integer.parseInt(parts[i]);
-            }
-            System.out.printf("%s (%.2f)%n", parts[0], suma/6.0);
-            suma = 0;
+            String nom = parts[0].trim();
+            if (nom.length() == 0) continue;
+            contAlumnes++;
             
+            double sumaAlumne = 0;
+            for (int i = 1; i <= n; i++) {
+                if (i < parts.length) {
+                    String notaText = parts[i].trim();
+                    if (esNumeric(notaText)) {
+                        sumaAlumne+=Integer.parseInt(notaText);
+                    }
+                }
+            }
+            System.out.printf("%s (%.2f)%n", nom, sumaAlumne/n);
+            if (contAlumnes == 0) {
+                System.out.println("El fitxer notes.csv no conté cap nota.");
+            }           
         }
         input.close();
+    }
+    
+    public static boolean esNumeric(String text) {
+        if (text == null || text.length() == 0) return false;
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isDigit(text.charAt(i))) return false;
+        }
+        return true;
     }
 }
