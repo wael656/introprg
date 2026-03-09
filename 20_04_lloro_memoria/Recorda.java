@@ -32,10 +32,15 @@ public class Recorda {
     public static void mostraRecords(String cami) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(cami));
         String linia;
+        boolean teRecords = false;
+        
         while((linia = input.readLine()) != null) {
             System.out.println("El lloro recorda: " + linia);
+            teRecords = true;
         }
-        
+        if (!teRecords) {
+            System.out.println("El lloro no recorda res");
+        }
         input.close();
         System.out.println("Adéu");
     }
