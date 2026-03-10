@@ -52,8 +52,8 @@ public class Traduccio {
         while ((liniaCSV = input.readLine()) != null) {
             String[] parts = liniaCSV.split(",", -1);
             if (parts.length == 2) {
-                String clau = parts[0];
-                String valor = parts[1];
+                String clau = parts[0].trim();
+                String valor = parts[1].trim();
                 linia = linia.replace(clau, valor);
             }
         }
