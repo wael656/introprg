@@ -37,6 +37,8 @@ public class Traduccio {
             output.write(liniaTraduida);
             output.newLine();
         }
+        input.close();
+        output.close();
     }
     
     public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException {
@@ -44,11 +46,14 @@ public class Traduccio {
         String liniaCSV;
         
         while ((liniaCSV = input.readLine()) != null) {
-            String[] parts = liniaCSV.split(",");
-            String clau = parts[0];
-            String valor = parts[1];
-            linia = linia.replace(clau, valor);
+            String[] parts = liniaCSV.split(",", -1);
+            if (parts.length == 2) {
+                String clau = parts[0];
+                String valor = parts[1];
+                linia = linia.replace(clau, valor);
+            }
         }
+        input.close();
         return linia;
     }
 }
