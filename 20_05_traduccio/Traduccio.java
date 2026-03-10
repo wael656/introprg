@@ -18,7 +18,7 @@ import java.io.*;
 public class Traduccio {
     public static void main(String[] args) throws IOException {
         if (args.length != 3) {
-            System.out.println("error");
+            System.out.println("Cal especificar els fitxers origen, traduccio i destinació");
             return;
         }
         String origen = args[0];
