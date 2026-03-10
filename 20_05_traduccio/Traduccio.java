@@ -16,7 +16,7 @@ Ens referirem a aquest fitxer com la destinació.*/
 import java.io.*;
 
 public class Traduccio {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String origen = args[0];
         String traduccio = args[1];
         String destinacio = args[2];
@@ -25,13 +25,13 @@ public class Traduccio {
         
     }
     
-    public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) {
+    public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(fitxerOrigen));
         BufferedWriter output = new BufferedWriter(new FileWriter(fitxerDestinacio));
         
         String linia;
         
-        while ((linia = input.readLine() != null) {
+        while ((linia = input.readLine()) != null) {
             String liniaTraduida = tradueixLinia(linia, fitxerTraduccio);
             
             output.write(liniaTraduida);
@@ -39,7 +39,7 @@ public class Traduccio {
         }
     }
     
-    public static String tradueixLinia(String linia, String fitxerTraduccio) {
+    public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(fitxerTraduccio));
         String liniaCSV;
         
@@ -49,5 +49,6 @@ public class Traduccio {
             String valor = parts[1];
             linia = linia.replace(clau, valor);
         }
+        return linia;
     }
 }
