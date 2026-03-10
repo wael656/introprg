@@ -17,6 +17,9 @@ import java.io.*;
 
 public class Traduccio {
     public static void main(String[] args) throws IOException {
+        if (args.length != 3) {
+            System.out.println("error");
+        }
         String origen = args[0];
         String traduccio = args[1];
         String destinacio = args[2];
