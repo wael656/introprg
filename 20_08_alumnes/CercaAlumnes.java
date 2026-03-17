@@ -15,8 +15,7 @@ El criteri de cerca és un String que el programa rep com a primer argument de l
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
-
-public class Alumne {
+public class CercaAlumnes {
     static class Alumne {
         String nom;
         String email;
