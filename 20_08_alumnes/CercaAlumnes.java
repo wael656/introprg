@@ -172,7 +172,7 @@ public class CercaAlumnes {
         br.close();
 
         if (!alumneTrobat) {
-            System.out.println("No s'ha trobat cap alumne amb els criteris indicats.");
+            System.out.println("No s'ha trobat cap alumne");
         }
     }
 }
