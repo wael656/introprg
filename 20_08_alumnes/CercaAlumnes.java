@@ -140,7 +140,7 @@ public class CercaAlumnes {
 
     public static void main(String[] args) throws IOException {
         if (args.length < 1) {
-            System.out.println("Error: Cal indicar un criteri de cerca.");
+            System.out.println("Ús: CercaAlumnes «criteri de cerca»");
             return;
         }
 
