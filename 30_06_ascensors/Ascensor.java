@@ -16,6 +16,10 @@ public class Ascensor {
     }
 
     public static void main(String[] args){
+        if (args.length != 0) {
+            System.out.println("Cal indicar un únic valor enter.");
+            return;
+        }
         String entrada = args[0];
         boolean esNum = false;
         for (int i = 0; i < entrada.length(); i++) {
