@@ -16,8 +16,8 @@ public class Ascensor {
     }
 
     public static void main(String[] args){
-        if (args.length < 1) {
-            System.out.println("error");
+        if (args.equals("cap")) {
+            return;
         }
         int quants = Integer.parseInt(args[0]);
         if (quants < 1) {
