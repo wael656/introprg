@@ -16,10 +16,21 @@ public class Ascensor {
     }
 
     public static void main(String[] args){
-        if (args.equals("cap")) {
+        String entrada = args[0];
+        boolean esNum = false;
+        for (int i = 0; i < entrada.length(); i++) {
+            char c = entrada.charAt(i);
+            if (c >= '0' && c <= '9') {
+                esNum = true;
+            }
+        }
+        int quants;
+
+        if (esNum) {
+            quants = Integer.parseInt(args[0]);
+        } else {
             return;
         }
-        int quants = Integer.parseInt(args[0]);
         if (quants < 1) {
             System.out.println("Cal indicar un únic valor enter.");
         }
