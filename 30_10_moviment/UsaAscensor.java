@@ -11,7 +11,7 @@ public class UsaAscensor {
         Ascensor ascensor = new Ascensor();
         System.out.println("Pis inicial: " + ascensor.pis);
         System.out.println("Moviment inicial: " + ascensor.moviment);
-        ascensor.moviment = "pujant";
+        ascensor.moviment = "aturat";
         System.out.println("Moviment inicial: " + ascensor.moviment);
     }
 }
