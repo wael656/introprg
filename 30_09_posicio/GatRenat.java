@@ -2,6 +2,6 @@
  En concret, podrà estar dret, assegut o estirat.*/
 public class GatRenat {
     int vides = 7;
-    String posicioIn = "estirat";
+    String posicio = "estirat";
     String posicioFi = "assegut"; 
 }
