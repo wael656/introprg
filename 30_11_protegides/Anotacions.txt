@@ -1,0 +1,196 @@
+##########################################
+Anotacions sobre les propietats protegides
+##########################################
+
+* Autor/a: Wael
+
+* Data: 23/03
+
+Introducció
+===========
+
+En aquest exercici incloc les meves anotacions sobre el tema de
+*propietats protegides* dins de la *programació orientada a objectes*.
+
+Considerarem la nova versió de ``GatRenat``::
+
+
+::
+
+    01   public class GatRenat {
+    02       private int vides = 7;
+    03       public int getVides() {  //  retorna el nombre de vides
+    04           return vides;
+    05       }
+    06       public void setVides(int novesVides) {   // modifica el nombre de vides si ens donen un de vàlid
+    07           if (novesVides >= 0) {
+    08               vides = novesVides;
+    09           }
+    10       }
+    11   }
+
+
+Pregunta 1. L'accés de sempre
+=============================
+
+Si ``UsaGatRenat`` fos:
+
+::
+
+       public class UsaGatRenat {
+           public static void main(String[] args) {
+               GatRenat renat = new GatRenat();
+               System.out.println("El gat Renat té " + renat.vides + " vides");
+           }
+       }
+
+Ens trobem que ens dona un error de compilació indicant que la variable vides té accés privat a GatRenat.
+
+Penso que passa perquè la propietat vides està declarada amb la paraula clau private.
+
+Pregunta 2. Un nou accés
+========================
+
+En modificar el codi de ``UsaGatRenat`` com:
+
+::
+
+     public class UsaGatRenat {
+         public static void main(String[] args) {
+             GatRenat renat = new GatRenat();
+             System.out.println("El gat Renat té " + renat.getVides() + " vides");
+         }
+     }
+
+La diferència respecte a la versió de la pregunta anterior és que en lloc d'intentar accedir directament a la propietat renat.vides, fem servir el mètode renat.getVides()..
+
+El resultat ara és que el programa compila correctament i mostra per pantalla: "El gat Renat té 7 vides".
+
+Penso que passa això perquè el mètode getVides() està declarat com a public, el que permet que es pugui cridar des de qualsevol altre lloc (inclòs UsaGatRenat).
+
+Pregunta 3. Canviant valor
+==========================
+
+Per què des del ``main()`` de ``UsaGatRenat`` poguem dir que ``renat`` té
+5 vides, cal fer ús del mètode setter proporcionat per la classe, cridant-lo com a renat.setVides(5); abans d'imprimir l'estat.
+
+El codi de ``UsaGatRenat`` seria:
+
+::
+
+    public class UsaGatRenat {
+    public static void main(String[] args) {
+        GatRenat renat = new GatRenat();
+        renat.setVides(5);
+        System.out.println("El gat Renat té " + renat.getVides() + " vides");
+    }
+}
+
+La sortida en executar-lo seria:
+
+:: 
+
+    $ java UsaGatRenat
+    El gat Renat té 5 vides
+
+
+La meva explicació de perquè això és així és que en cridar a setVides(5), el valor 5 es passa com a argument a novesVides. Dins del mètode s'avalua la condició if (5 >= 0), que és certa, i s'assigna el valor a la propietat privada vides. Posteriorment, getVides() ens retorna aquesta xifra actualitzada.
+
+
+Pregunta 4. Un valor absurd
+===========================
+
+En intentar assignar de la manera anterior -12 en comptes de 5 vides, ens
+trobem que la modificació és ignorada i les vides del gat no canvien.
+
+El codi seria:
+
+::
+
+    public class UsaGatRenat {
+        public static void main(String[] args) {
+        GatRenat renat = new GatRenat();
+        renat.setVides(-12);
+        System.out.println("El gat Renat té " + renat.getVides() + " vides");
+    }
+}
+
+
+La sortida en executar-lo seria:
+
+:: 
+
+    $ java UsaGatRenat
+    El gat Renat té 7 vides
+
+
+La meva explicació de perquè això és així és que el mètode setVides() s'encarrega de protegir l'estat de l'objecte. Com que l'argument -12 no compleix la condició (novesVides >= 0), el codi dins de l'if no s'executa i la variable privada manté el seu valor inicial per defecte (7).
+
+
+Pregunta 5. I des de ``GatRenat``?
+==================================
+
+He experimentat com es comporta ``private`` des del ``main()`` del propi
+``GatRenat``. En concret, he provat:
+
+::
+
+   public class GatRenat {
+       private int vides = 7;
+       public int getVides() {  //  retorna el nombre de vides
+           return vides;
+       }
+       public void setVides(int novesVides) {   // modifica el nombre de vides si ens donen un de vàlid
+           if (novesVides >= 0) {
+               vides = novesVides;
+           }
+       }
+       public static void main(String[] args) {
+           GatRenat renat = new GatRenat();
+           renat.vides = -12;
+           System.out.println("El gat Renat té " + renat.vides + " vides");
+       }
+   }
+
+En intentar compilar i executar aquesta versió em trobo què tot compila sense cap error i en executar el programa mostra per pantalla que el gat té -12 vides.
+
+Comparant-lo amb el que passava a la pregunta 1, veiem que ara sí que es pot accedir a la variable privada .vides de forma directa i fins i tot assignar-hi dades incorrectes..
+
+La meva explicació és que l'etiqueta private només oculta les variables de cara a les classes externes. Com que el mètode main es troba físicament ubicat dins la pròpia definició de la classe GatRenat, té permisos totals sobre tots els elements de la classe, encara que siguin privats, saltant-se per complet les barreres del setter.
+
+Pregunta 6. Valors absurds novament
+===================================
+
+Un cop hem vist el funcionament d'aquesta versió de ``GatRenat``, ens
+podem fer la següent pregunta:
+
+    És possible posar un valor absurd a les vides d'una instància de
+    GatRenat sense modificar el programa ``GatRenat.java``?
+
+La meva resposta és no perquè des de qualsevol altre programa (una classe externa), la propietat .vides és invisible gràcies al seu modificador private. L'única porta d'accés és a través de setVides(), que conté la lògica que impossibilita que el valor sigui inferior a 0..
+
+Pregunta 7. públic i privat
+===========================
+
+La meva idea del paper que juguen les paraules ``public`` i ``private`` a
+les propietats d'una classe és garantir el principi d'encapsulament en la Programació Orientada a Objectes. private s'utilitza per amagar l'estat intern (les dades) de l'objecte per tal que ningú el manipuli incorrectament. public defineix la interfície per interactuar amb ell, generalment deixant públics els mètodes (coment els getters i setters) que fan d'intermediaris i actuen com un filtre de seguretat.
+
+Pregunta 8. Només *getter*
+==========================
+
+Aquesta implementació de ``GatRenat`` disposa de *getter* i de *setter*.
+Aquests venen definits pels mòduls getVides() i setVides(int novesVides).
+
+En cas que ``GatRenat`` només disposés de *getter*, el resultat seria que els programes externs només podrien consultar o llegir quantes vides té l'objecte, convertint la propietat en un camp de "només lectura". Mai es podria modificar.
+
+En canvi, si només en tingués *setter* el que passaria és que la propietat es convertiria en un camp de "només escriptura". Es podrien establir els valors de les vides complint els criteris, però cap programa extern sabria dir quantes vides queden en realitat.
+
+Finalment, si no en tingués cap dels dos, ens trobaríem que la propietat estaria totalment aïllada i segellada a dins de la classe. L'estat seria opac des de fora: inalterable de forma explícita i tampoc podríem obtenir la informació de les vides per part d'aquesta instància.
+
+
+Pregunta 9. Diferències amb els mòduls ja coneguts
+==================================================
+
+Els mòduls ``getVides()`` i ``setVides()`` tenen una definició
+lleugerament diferent als mòduls que hem declarat abans del tema de POO.
+En concret sense static, cada gat té les seves pròpies vides de manera independent. Si utilitzéssim static, tots els gats del programa compartirien exactament les mateixes vides. És a dir, si un gat en perdés una, se'ls hi restaria a tots de cop! Com que volem que cada gat (cada objecte) tingui el seu propi estat individual, no fem servir static.
