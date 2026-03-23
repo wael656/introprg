@@ -1,3 +1,4 @@
+/*En aquest programa fem un ascensor amb un procediment que si ho crides puja un pis, es a dir si esta al -1 puja al 0, si esta al pis 2 puja al 3.*/
 public class Ascensor {
     int pis = -1;
     public static void puja(Ascensor ascensor) {
