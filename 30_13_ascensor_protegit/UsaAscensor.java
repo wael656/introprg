@@ -39,8 +39,8 @@ public class UsaAscensor {
 
         if (args.length >= 2) {
             if (esEnter(args[0])) {
-            ascensor.setPis(Integer.parseInt(args[0]));
-            ascensor.setMoviment(args[1]);    
+                ascensor.setPis(Integer.parseInt(args[0]));
+                ascensor.setMoviment(args[1]);    
             }            
         }
         System.out.println("Pis final: " + ascensor.getPis());
