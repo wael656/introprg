@@ -12,8 +12,9 @@ public class UsaAscensor {
 
             if (Character.isDigit(primerCaracter) || primerCaracter == '-') {
                 ascensor.setPis(Integer.parseInt(args[0]));
-                ascensor.setMoviment(args[1]);
             }
+            ascensor.setMoviment(args[1]);
+
         }
         System.out.println("Pis final: " + ascensor.getPis());
         System.out.println("Moviment final: " + ascensor.getMoviment());
