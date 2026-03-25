@@ -47,7 +47,7 @@ public class UsaAscensor {
         System.out.println("Introdueix nou pis:");
         String nouPis = Entrada.readLine();
         if (esEnter(nouPis)) {
-            ascensor.setPis(Integer.parseInt(Entrada.readLine()));
+            ascensor.setPis(Integer.parseInt(nouPis));
         }
 
         System.out.println("Introdueix nou moviment:");
