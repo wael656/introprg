@@ -102,11 +102,9 @@ public class GatRenat {
     }
 
     public String reviu(int novesVides) {
-        if (vides < 1) {
+        if (!esViu() && novesVides >= 1) {
             vides = novesVides;
-            if (vides > 0) {
-                return "guai!";
-            }
+            return "guai!";
         }
         return "..."; 
     }
