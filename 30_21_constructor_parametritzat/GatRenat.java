@@ -20,3 +20,4 @@ public class GatRenat {
     public static void main(String[] args) {
         System.out.println(new GatRenat(7, "estirat"));
     }
+}
