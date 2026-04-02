@@ -81,20 +81,21 @@ public class GatRenat {
     }
 
     public String mor() {
-        if (vides > -1) {
-            vides = vides - 1;
-            if (vides > 0) {
-                return "auch";
-            } else if (vides == 0) {
-                return "ximpún";
-            }
-        } 
-        return "...";
+        if (!esViu()) {
+            return "...";
+        }
+        vides--;
+
+        if (vides > 0) {
+            return "auch";
+        } else {
+            return "ximpun!";
+        }
     }
 
     public String reviu() {
-        if (vides == 0) {
-            vides++;
+        if (!esViu()) {
+            vides = 1;
             return "guai!";
         }
         return "...";
