@@ -12,6 +12,7 @@ public class GatRenat {
         posicio = novaPosicio;
     }
     public int getVides() { return vides; }
+    public String getPosicio() { return posicio; }
     @Override
     public String toString() {
         return String.format("Vides: %d. Posició: %s", vides, posicio);
