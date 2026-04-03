@@ -15,7 +15,7 @@ public class GatRenat {
 
     public GatRenat(String posicio) {
         setVides(vides);
-        setPosicio("dret");
+        setPosicio(posicio);
     }
 
     public GatRenat(int vides, String posicio) {
