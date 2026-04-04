@@ -8,25 +8,25 @@ boolean esObert()
 
 A banda, ofereix dos constructors, el de per defecte que l'inicialitzarà tancat, i un d'específic que permet indicar si l'ull comença obert (true) o no.*/
 public class UllDeGat {
-    private boolean obert;
+    private boolean obret;
 
     public UllDeGat() {
-        this.obert = false;
+        this.obret = false;
     }
 
     public UllDeGat(boolean comEsta) {
-        this.obert = comEsta;
+        this.obret = comEsta;
     }
 
-    public void obert() {
-        this.obert = true;
+    public void obret() {
+        this.obret = true;
     }
 
     public void tancat() {
-        this.obert = false;
+        this.obret = false;
     }
     
     public boolean esObert() {
-        return this.obert;
+        return this.obret;
     }
 }

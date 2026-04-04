@@ -39,13 +39,13 @@ public class GatRenat {
         }
 
         if (this.posicio.equals("dret")) {
-            ullDret.obert();
-            ullEsquerre.obert();
+            ullDret.obret();
+            ullEsquerre.obret();
         } else if (this.posicio.equals("estirat")) {
             ullDret.tancat();
             ullEsquerre.tancat();
         } else if (this.posicio.equals("assegut")) {
-            ullDret.obert();
+            ullDret.obret();
             ullEsquerre.tancat();
         }
     }
