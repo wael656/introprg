@@ -46,7 +46,7 @@ public class GatRenat {
             return "passo de fer res";
         }
         setPosicio("dret");
-        if (HiHaPicarol()) {
+        if (hiHaPicarol()) {
             this.picarol.sona();
         }
         return "ja m'aixeco";
@@ -57,7 +57,7 @@ public class GatRenat {
             return "passo de fer res";
         }
         setPosicio("assegut");
-        if (HiHaPicarol()) {
+        if (hiHaPicarol()) {
             this.picarol.sona();
         }
         return "ja m'assec";
@@ -68,13 +68,13 @@ public class GatRenat {
             return "passo de fer res";
         }
         setPosicio("estirat");
-        if (HiHaPicarol()) {
+        if (hiHaPicarol()) {
             this.picarol.sona();
         }
         return "ja m'estiro";
     }
 
-    public boolean HiHaPicarol() {
+    public boolean hiHaPicarol() {
         if (picarol == null) {
             return false;
         }
