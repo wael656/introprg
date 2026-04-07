@@ -2,7 +2,7 @@
 els accesors de vides i posicio estan al Gat i gracie al extends  la podem utilitzar aqui.*/
 public class GatRenat extends Gat {
     public boolean esViu() {
-        return vides >= 0;
+        return vides > 0;
     }
     
     public boolean esDret() {
