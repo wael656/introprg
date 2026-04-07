@@ -2,19 +2,19 @@
 els accesors de vides i posicio estan al Gat i gracie al extends  la podem utilitzar aqui.*/
 public class GatRenat extends Gat {
     public boolean esViu() {
-        return vides > 0;
+        return vides >= 0;
     }
     
     public boolean esDret() {
-        return posicio == "dret";
+        return getPosicio().equals("dret");
     }
     
     public boolean esAssegut() {
-        return posicio == "assegut";
+        return getPosicio().equals("assegut");
     }
 
     public boolean esEstirat() {
-        return posicio == "estirat";
+        return getPosicio().equals("estirat");
     }
 
     public String aixecat() {

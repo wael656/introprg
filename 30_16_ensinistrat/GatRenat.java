@@ -28,7 +28,7 @@ public class GatRenat {
     }
 
     public boolean esViu() {
-        if (vides >= 0) {
+        if (vides > 0) {
             return true;
         }
         return false;
