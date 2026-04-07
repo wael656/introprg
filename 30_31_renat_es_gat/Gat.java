@@ -5,8 +5,8 @@ A l'hora de codificar les dues classes, tingues present que:
 Gat només definirà els accessors de vides i posició.
 GatRenat ja no definirà els accessors de vides ni de posició. Tampoc no definirà cap atribut. Per tant, aquells mètodes que requereixin accés a les propietats hauran de utilitzar els accessors heredats de Gat.*/
 public class Gat {
-    public int vides = 7;
-    public String posicio = "estirat";
+    private int vides = 7;
+    private String posicio = "estirat";
 
     public int getVides() { return vides; }
     public String getPosicio() { return posicio; }
