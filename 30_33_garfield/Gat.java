@@ -21,18 +21,18 @@ public class Gat {
     private String posicio = "estirat";
 
     public Gat (String nom) {
-        this(nom, "estirat", 7);
+        this(nom, 7, "estirat");
     }
 
     public Gat(String nom, int vides) {
-        this(nom, "estirat", vides);
+        this(nom, vides, "estirat");
     }
 
     public Gat(String nom, String posicio) {
-        this(nom, posicio, 7);
+        this(nom, 7, posicio);
     }
 
-    public Gat(String nom, String posicio, int vides) {
+    public Gat(String nom, int vides, String posicio) {
         if (nom == null || nom.isBlank()) {
             this.nom = "anònim";
         } else {

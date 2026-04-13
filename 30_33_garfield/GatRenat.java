@@ -14,6 +14,6 @@ public class GatRenat extends Gat {
         }
 
         public GatRenat(int vides, String posicio) {
-            super("Renat", posicio, vides);
+            super("Renat", vides, posicio);
         }
     }
