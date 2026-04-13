@@ -25,8 +25,8 @@ public class Garfield extends Gat {
     public String estirat() {
         if (esAssegut()) {
             setPosicio("estirat");
-            return "passo de fer res";
+            return "Bai Maitea, bai";
         }
-        return "Bai Maitea, bai";
+        return "passo de fer res";
     }
 }
