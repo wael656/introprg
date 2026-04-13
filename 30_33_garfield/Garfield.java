@@ -23,10 +23,10 @@ public class Garfield extends Gat {
 
     @Override
     public String estirat() {
-        if (esAssegut()) {
-            setPosicio("estirat");
-            return "Bai Maitea, bai";
+        if (esEstirat()) {
+            return "passo de fer res";
         }
-        return "passo de fer res";
+        setPosicio("estirat");
+        return "Bai Maitea, bai";
     }
 }
