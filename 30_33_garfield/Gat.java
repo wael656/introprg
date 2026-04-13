@@ -58,6 +58,10 @@ public class Gat {
         }
     }
 
+    public boolean esViu() {
+        return vides >= 0;
+    }
+
     public boolean esDret() {
         return getPosicio().equals("dret");
     }
